@@ -4,15 +4,18 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-
-import HomeIconWithBadge from './src/components/HomeIconWithBadge';
+// screens
 import HomeScreen from './src/modules/Home';
 import PlayScreen from './src/modules/Play';
+import ProfileScreen from './src/modules/Profile';
 
+// components
+import HomeIconWithBadge from './src/components/HomeIconWithBadge';
 
 const TabNavigator = createBottomTabNavigator({
   Home: HomeScreen,
-  Play: PlayScreen
+  Play: PlayScreen,
+  Profile: ProfileScreen
 }, {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, horizontal, tintColor }) => {
@@ -22,11 +25,12 @@ const TabNavigator = createBottomTabNavigator({
       if (routeName === 'Home') {
         // iconName = `home${focused ? '' : '-outline'}`;
         iconName = `ios-home`;
+      } else if (routeName === 'Profile') {
+        iconName = `ios-contact`;
+      } else if (routeName === 'Play') {
         // Sometimes we want to add badges to some icons.
         // You can check the implementation below.
-      } else if (routeName === 'Play') {
         iconName = `ios-heart`;
-
         IconComponent = HomeIconWithBadge;
       }
 
