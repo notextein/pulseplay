@@ -1,0 +1,40 @@
+dependencies: \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerModule.m \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-prefix.pch \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerModule.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTEventEmitter.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTUIManager.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTRootView.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTViewManager.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTUIManagerUtils.h \
+  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTUIManagerObserverCoordinator.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerState.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerDirection.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandler.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerEvents.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerManager.h \
+  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native-gesture-handler/ios/RNGestureHandlerButton.h

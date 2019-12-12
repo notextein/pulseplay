@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-export default class MyComponent extends React.Component {
+export default class MyAppBar extends React.Component {
   render() {
     return (
       <Appbar style={styles.bottom}>
