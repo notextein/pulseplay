@@ -5,6 +5,75 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>715F0C04-F645-4F84-92F2-2A2FCF820835</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>715F0C04-F645-4F84-92F2-2A2FCF820835.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>pulseplay project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>pulseplay</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>597858992.057145</real>
+			<key>timeStoppedRecording</key>
+			<real>597858998.57594705</real>
+			<key>title</key>
+			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>715F0C04-F645-4F84-92F2-2A2FCF820835</string>
+		</dict>
+		<key>D100D193-4AF9-47AC-91F8-B93659154D14</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D100D193-4AF9-47AC-91F8-B93659154D14.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>pulseplay project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>pulseplay</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>597858791.82453704</real>
+			<key>timeStoppedRecording</key>
+			<real>597858798.76771104</real>
+			<key>title</key>
+			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>D100D193-4AF9-47AC-91F8-B93659154D14</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
