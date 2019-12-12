@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>15ED4FE8-0B2F-4FE3-BBCD-AD189BA27BF0</key>
+		<key>5CFC6F05-7258-417C-A720-442FB07403B6</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>15ED4FE8-0B2F-4FE3-BBCD-AD189BA27BF0.xcactivitylog</string>
+			<string>5CFC6F05-7258-417C-A720-442FB07403B6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>597860237.247774</real>
+			<real>597860870.54013705</real>
 			<key>timeStoppedRecording</key>
-			<real>597860251.92881894</real>
+			<real>597860872.63972294</real>
 			<key>title</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>15ED4FE8-0B2F-4FE3-BBCD-AD189BA27BF0</string>
+			<string>5CFC6F05-7258-417C-A720-442FB07403B6</string>
 		</dict>
-		<key>715F0C04-F645-4F84-92F2-2A2FCF820835</key>
+		<key>929397CE-C86F-42D9-8255-F213B20C5FE3</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>715F0C04-F645-4F84-92F2-2A2FCF820835.xcactivitylog</string>
+			<string>929397CE-C86F-42D9-8255-F213B20C5FE3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,13 +66,13 @@
 			<key>signature</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>597858992.057145</real>
+			<real>597861305.54281104</real>
 			<key>timeStoppedRecording</key>
-			<real>597858998.57594705</real>
+			<real>597861320.81317306</real>
 			<key>title</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>715F0C04-F645-4F84-92F2-2A2FCF820835</string>
+			<string>929397CE-C86F-42D9-8255-F213B20C5FE3</string>
 		</dict>
 	</dict>
 </dict>
