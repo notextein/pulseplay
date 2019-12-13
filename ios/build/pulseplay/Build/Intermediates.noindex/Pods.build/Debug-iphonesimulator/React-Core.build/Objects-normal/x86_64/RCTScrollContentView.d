@@ -1,25 +1,23 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTPackagerConnection.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/UIView+React.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Views/ScrollView/RCTScrollView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTAutoInsetsProtocol.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTEventDispatcher.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridge.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridgeDelegate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridgeModule.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTFrameUpdate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTInvalidating.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTScrollableProtocol.h
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/UIView+React.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Views/ScrollView/RCTScrollView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTAutoInsetsProtocol.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTEventDispatcher.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridge.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridgeDelegate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridgeModule.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTFrameUpdate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTInvalidating.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTScrollableProtocol.h

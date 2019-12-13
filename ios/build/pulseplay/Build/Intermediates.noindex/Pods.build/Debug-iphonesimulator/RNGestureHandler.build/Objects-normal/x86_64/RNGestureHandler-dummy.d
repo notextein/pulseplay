@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-dummy.m \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-prefix.pch
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-dummy.m \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-prefix.pch

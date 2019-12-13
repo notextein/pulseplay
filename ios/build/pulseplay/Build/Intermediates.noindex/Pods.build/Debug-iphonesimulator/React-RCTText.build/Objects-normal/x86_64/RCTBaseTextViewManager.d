@@ -1,29 +1,27 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextViewManager.m \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-RCTText/React-RCTText-prefix.pch \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBaseTextViewManager.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTViewManager.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextViewManager.m \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-RCTText/React-RCTText-prefix.pch \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTBaseTextViewManager.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTViewManager.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h

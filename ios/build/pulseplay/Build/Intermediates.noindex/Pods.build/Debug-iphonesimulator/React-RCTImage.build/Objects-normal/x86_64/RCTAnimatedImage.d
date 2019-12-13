@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/Libraries/Image/RCTAnimatedImage.m \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-RCTImage/React-RCTImage-prefix.pch \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/React-Core/React/RCTAnimatedImage.h
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/Libraries/Image/RCTAnimatedImage.m \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-RCTImage/React-RCTImage-prefix.pch \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/React-Core/React/RCTAnimatedImage.h

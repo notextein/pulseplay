@@ -1,35 +1,33 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTRootView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridge.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridgeDelegate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTPackagerConnection.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBridgeModule.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTFrameUpdate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTInvalidating.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceDelegate.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceStage.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceSizeMeasureMode.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTUtils.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Profiler/RCTProfile.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTRootContentView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/RCTRootViewDelegate.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Base/Surface/RCTSurface.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/React/Views/UIView+React.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTRootView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridge.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridgeDelegate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBridgeModule.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTFrameUpdate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTInvalidating.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceDelegate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceStage.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceSizeMeasureMode.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTUtils.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTRootContentView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/RCTRootViewDelegate.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Base/Surface/RCTSurface.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h

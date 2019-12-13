@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-jsinspector/React-jsinspector-dummy.m \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/React-jsinspector/React-jsinspector-prefix.pch
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-jsinspector/React-jsinspector-dummy.m \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/React-jsinspector/React-jsinspector-prefix.pch

@@ -1,0 +1,4 @@
+#Fri Dec 13 08:08:56 PST 2019
+base.0=/Users/plukdevops/Documents/Hackathon/efica/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

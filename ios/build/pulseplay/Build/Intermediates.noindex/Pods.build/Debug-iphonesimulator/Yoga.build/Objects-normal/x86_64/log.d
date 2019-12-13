@@ -1,16 +1,16 @@
 dependencies: \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/log.cpp \
-  /Users/rv/Documents/experiment/pulseplay/ios/Pods/Target\ Support\ Files/Yoga/Yoga-prefix.pch \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/log.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGConfig.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/Yoga-internal.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/CompactValue.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGNode.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/Bitfield.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGLayout.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGFloatOptional.h \
-  /Users/rv/Documents/experiment/pulseplay/node_modules/react-native/ReactCommon/yoga/yoga/YGStyle.h
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/log.cpp \
+  /Users/plukdevops/Documents/Hackathon/efica/ios/Pods/Target\ Support\ Files/Yoga/Yoga-prefix.pch \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/log.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGConfig.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/Yoga-internal.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/CompactValue.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGNode.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/Bitfield.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGLayout.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGFloatOptional.h \
+  /Users/plukdevops/Documents/Hackathon/efica/node_modules/react-native/ReactCommon/yoga/yoga/YGStyle.h

@@ -8,13 +8,9 @@
 		<data>
 		TneGhDkoD7Q01Gl8e5EScUBsgfM=
 		</data>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		2WaEqRQfrOiqUi+jwSUdIEuvYvs=
-		</data>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
-		<data>
-		KIVmfgWhwnHW3E86KZE+aoKJhdA=
+		pFRZMFaZynxO9vYdoLbzeBUjbJU=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -70,15 +66,15 @@
 		</data>
 		<key>Frameworks/XCTest.framework/Info.plist</key>
 		<data>
-		vDar5GYm8oCbXa6hpw5388UIp/M=
+		DQ4GPJ7FuM6H+FaCC/2wxhPSGCQ=
 		</data>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<data>
-		BxGDDspDE7UZ4y5B0KMkepi79P0=
+		HK6asLJ70IK7E4e83e8R1gxACHo=
 		</data>
 		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
 		<data>
-		kMeaDkpb9bsb+OIm7hyNsv3J0bQ=
+		/8LQToTPOL9FsEsYDaACQ21Day0=
 		</data>
 		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -91,11 +87,11 @@
 		</dict>
 		<key>Frameworks/XCTest.framework/version.plist</key>
 		<data>
-		xIW7Y7yzOD6JGyOs6koc9aCjMmU=
+		P6P66kW7+LvLIo4WHjXGltpT8CA=
 		</data>
 		<key>Frameworks/libXCTestBundleInject.dylib</key>
 		<data>
-		ZSmfVBZZGDNWNdn/b5XApmISgmA=
+		xKX69bDGMJa2TcU/BC9ypZ06rsI=
 		</data>
 		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
 		<data>
@@ -103,7 +99,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aMniWJzyJ4o8jpXSaYJFnRtUqXc=
+		5QMFPAdZsW8j5f4FUcusYaM1y5I=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -131,19 +127,19 @@
 		</data>
 		<key>PlugIns/pulseplayTests.xctest.dSYM/Contents/Resources/DWARF/pulseplayTests</key>
 		<data>
-		y0f9yJ4eDZk/hmmvwSeEzXbd3Ao=
+		lERHgzHCPCR8wmx64Z4/Wlu9bkk=
 		</data>
 		<key>PlugIns/pulseplayTests.xctest/Info.plist</key>
 		<data>
-		wOlP/fm1i3tcnTOhAFocYkQtAAM=
+		4Vvi//eQIQMYHTyoeul1GH0i9bk=
 		</data>
 		<key>PlugIns/pulseplayTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		xvYeWUppGGYp8s9BEpNGaWfPRUw=
+		cldvQ8/dIAag13kHB5PFbNdCp64=
 		</data>
 		<key>PlugIns/pulseplayTests.xctest/pulseplayTests</key>
 		<data>
-		Jt2haIVbjryEbNPb5imrc1wh8jo=
+		M9ObQ2G+DgVzYpm7BGDJuW3Hffw=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -167,26 +163,15 @@
 			eVXKFBJ7MEEsEU6xPP1wK12rJl/rGIDRaV1zyqgkzeE=
 			</data>
 		</dict>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2WaEqRQfrOiqUi+jwSUdIEuvYvs=
+			pFRZMFaZynxO9vYdoLbzeBUjbJU=
 			</data>
 			<key>hash2</key>
 			<data>
-			NNuPrKqmxhx+uDtHNkjWIQPU9nTHqAT3/8mMrj5+8Z4=
-			</data>
-		</dict>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KIVmfgWhwnHW3E86KZE+aoKJhdA=
-			</data>
-			<key>hash2</key>
-			<data>
-			gpwxEhl1pHPsRTNHVJ4TwcG97/7X2zvFAQtXE9IS7Z0=
+			z5P6SD2jP51Lzy3MslyOowuBndgESSn0aVheD8N+kec=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -336,33 +321,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vDar5GYm8oCbXa6hpw5388UIp/M=
+			DQ4GPJ7FuM6H+FaCC/2wxhPSGCQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AmK68TZqHbKBvdo7/uTYGofToBgnvlf9iZLByXIBl1U=
+			VfVpYXVjG5OK2j8J39CP2mIMg1P5eFaYkRIJ/Hb2RSQ=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BxGDDspDE7UZ4y5B0KMkepi79P0=
+			HK6asLJ70IK7E4e83e8R1gxACHo=
 			</data>
 			<key>hash2</key>
 			<data>
-			1/TJAFwjHLbAmrSJiB+2LzkHJJCjrGOoyGJKJeDEB8I=
+			olgg9NXiZ2M1ifvjBR8uTJxtXlM5EacLdDrNxfmImoY=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kMeaDkpb9bsb+OIm7hyNsv3J0bQ=
+			/8LQToTPOL9FsEsYDaACQ21Day0=
 			</data>
 			<key>hash2</key>
 			<data>
-			K9iq+LfV1aUbu8VtV4LFdMmoFS26FTT7V0Zve0G8HbE=
+			C7sJpbu4qpi8/rH5JYpdQYncotP69JQ9Fiu8jrHXYvU=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
@@ -382,22 +367,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xIW7Y7yzOD6JGyOs6koc9aCjMmU=
+			P6P66kW7+LvLIo4WHjXGltpT8CA=
 			</data>
 			<key>hash2</key>
 			<data>
-			6YYypq8I2iJo8ArOJiq6vPZEI0u3LnlIh8K2IyuVOBk=
+			2BV684CZjHtMZHxSiwC5qc/DGXv9WIOWUc9dEU/Q1pw=
 			</data>
 		</dict>
 		<key>Frameworks/libXCTestBundleInject.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZSmfVBZZGDNWNdn/b5XApmISgmA=
+			xKX69bDGMJa2TcU/BC9ypZ06rsI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ctts81K0p3OXfMqY4w1cpAfRA+3NNciZc51gVVnslSE=
+			jJ/zKe1SwWk9KkZ4MXV01NPW4QiHpU1aZhpfTDknkp0=
 			</data>
 		</dict>
 		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
@@ -470,44 +455,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y0f9yJ4eDZk/hmmvwSeEzXbd3Ao=
+			lERHgzHCPCR8wmx64Z4/Wlu9bkk=
 			</data>
 			<key>hash2</key>
 			<data>
-			+OdOGvtb6yq/JX5emXzLB9Ud7PiQ3BJdzxJjSVgIF5M=
+			gRdrJMnpWm+ZwRdjDt2uqk2kkrjfyrC3TV35f5wGDsc=
 			</data>
 		</dict>
 		<key>PlugIns/pulseplayTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wOlP/fm1i3tcnTOhAFocYkQtAAM=
+			4Vvi//eQIQMYHTyoeul1GH0i9bk=
 			</data>
 			<key>hash2</key>
 			<data>
-			o9YjH3oUyPmT7amz0g6rAUeEOBFoB15I953+54awRdI=
+			L3rikgfUeZkZezFeYIxOIF89GRBM74UU0+H875LD6CE=
 			</data>
 		</dict>
 		<key>PlugIns/pulseplayTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xvYeWUppGGYp8s9BEpNGaWfPRUw=
+			cldvQ8/dIAag13kHB5PFbNdCp64=
 			</data>
 			<key>hash2</key>
 			<data>
-			x6iS6XNj094NJ50h1RQgoJwBPPtz3+bRpvvMWt4RtJE=
+			cf0/eNnfY9wR699n7qYa+BpmU+jTc2gw+wd9GPAURxs=
 			</data>
 		</dict>
 		<key>PlugIns/pulseplayTests.xctest/pulseplayTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Jt2haIVbjryEbNPb5imrc1wh8jo=
+			M9ObQ2G+DgVzYpm7BGDJuW3Hffw=
 			</data>
 			<key>hash2</key>
 			<data>
-			GPYqrN+pYLvw0XieBFfWKT2xuBrLKd+VIShyevJYMdA=
+			Yb67Im7a2/DdmYFkOCn0c+yBUvFVKlvCHiRRxzZJcCU=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>

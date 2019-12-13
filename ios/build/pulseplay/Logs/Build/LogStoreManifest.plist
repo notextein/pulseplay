@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>logFormatVersion</key>
-	<integer>10</integer>
+	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>5CFC6F05-7258-417C-A720-442FB07403B6</key>
+		<key>5840EA3C-381E-4576-B143-D0DEEE136EEF</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,14 +15,9 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>5CFC6F05-7258-417C-A720-442FB07403B6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
+			<string>5840EA3C-381E-4576-B143-D0DEEE136EEF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
 			<string>pulseplay project</string>
 			<key>schemeIdentifier-schemeName</key>
@@ -32,15 +27,15 @@
 			<key>signature</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>597860870.54013705</real>
+			<real>597894949.37035096</real>
 			<key>timeStoppedRecording</key>
-			<real>597860872.63972294</real>
+			<real>597894950.74021101</real>
 			<key>title</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>5CFC6F05-7258-417C-A720-442FB07403B6</string>
+			<string>5840EA3C-381E-4576-B143-D0DEEE136EEF</string>
 		</dict>
-		<key>929397CE-C86F-42D9-8255-F213B20C5FE3</key>
+		<key>FF62820A-D75A-48FD-B2D4-093137E212F0</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -49,14 +44,9 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>929397CE-C86F-42D9-8255-F213B20C5FE3.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
+			<string>FF62820A-D75A-48FD-B2D4-093137E212F0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
 			<string>pulseplay project</string>
 			<key>schemeIdentifier-schemeName</key>
@@ -66,13 +56,13 @@
 			<key>signature</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>597861305.54281104</real>
+			<real>597915816.80324399</real>
 			<key>timeStoppedRecording</key>
-			<real>597861320.81317306</real>
+			<real>597915823.39213502</real>
 			<key>title</key>
 			<string>Building workspace pulseplay with scheme pulseplay and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>929397CE-C86F-42D9-8255-F213B20C5FE3</string>
+			<string>FF62820A-D75A-48FD-B2D4-093137E212F0</string>
 		</dict>
 	</dict>
 </dict>
