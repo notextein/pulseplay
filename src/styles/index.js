@@ -83,12 +83,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     left: 10
-  },
-  userDisplayName: {
-    color: '#4D4E4F',
-    fontWeight: 'bold',
-    fontSize: 30,
-    marginTop: 10
   }
 });
 
