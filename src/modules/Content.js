@@ -29,6 +29,12 @@ const styles = StyleSheet.create({
   content: {
     fontSize: 16,
     marginTop: 25
+  },
+  related: {
+    marginTop: 20,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#4D4E4F'
   }
 });
 
@@ -56,6 +62,7 @@ export default class Content extends React.Component {
             By {author} on {datePublished}
           </Text>
           <Text style={styles.content}>{content}</Text>
+          <Text style={styles.related}>Related articles here...</Text>
         </View>
       </ScrollView>
     );

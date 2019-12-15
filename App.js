@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -15,6 +14,7 @@ import ContentScreen from './src/modules/Content';
 import KolProfileScreen from './src/modules/KolProfile';
 import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
+import PostScreen from './src/modules/Post';
 
 // components
 import HomeIconWithBadge from './src/components/HomeIconWithBadge';
@@ -55,6 +55,15 @@ const ProfileStack = createStackNavigator({
   }
 });
 
+const PostStack = createStackNavigator({
+  Post: {
+    screen: PostScreen,
+    navigationOptions: {
+      headerTitle: 'Create Post'
+    }
+  }
+});
+
 const TabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeScreen,
@@ -71,6 +80,15 @@ const TabNavigator = createBottomTabNavigator({
       tabBarLabel: 'Pulse',
       tabBarIcon: ({ tintColor }) => (
         <Icon name='heart' color={tintColor} size={25} />
+      )
+    }
+  },
+  Post: {
+    screen: PostStack,
+    navigationOptions: {
+      tabBarLabel: 'Post',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='plus-square-o' color={tintColor} size={25} />
       )
     }
   },

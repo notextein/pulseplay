@@ -14,9 +14,9 @@ export default class KolProfile extends React.Component {
     return (
       <ScrollView>
         <ProfileHeader {...this.props.navigation.state.params} />
-        <Text style={{ marginLeft: 20, marginTop: 20 }}>
-          Articles published here...
-        </Text>
+        <View style={{ marginLeft: 20, marginTop: 20 }}>
+          <Text>Articles published here...</Text>
+        </View>
       </ScrollView>
     );
   }
