@@ -2,3 +2,5 @@ node_modules
 
 ios/build/**
 ios/Pods/**
+ios/pulseplay.xcodeproj/**
+ios/pulseplay.xcworkspace/**
