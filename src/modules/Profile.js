@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { ScrollView } from 'react-native';
 
 import ProfileHeader from '../components/ProfileHeader';
@@ -6,9 +7,9 @@ import UserProfileItem from '../components/UserProfileItem';
 
 import currentUser from '../data/user'; // should be from store
 
-export default class Profile extends React.Component {
+class Profile extends React.Component {
   render() {
-    const { navigation } = this.props;
+    const { navigation, auth } = this.props;
     return (
       <ScrollView>
         <ProfileHeader {...currentUser} />
@@ -26,3 +27,11 @@ export default class Profile extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    auth: state.auth
+  };
+};
+
+export default connect(mapStateToProps)(Profile);

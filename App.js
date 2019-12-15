@@ -50,7 +50,7 @@ const ProfileStack = createStackNavigator({
   Preference: {
     screen: PreferenceScreen,
     navigationOptions: {
-      headerTitle: 'Preference'
+      headerTitle: 'Feed Preferences'
     }
   }
 });

@@ -1,33 +1,57 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import { ScrollView, View, StyleSheet } from 'react-native';
+import { Chip } from 'react-native-paper';
 
-import Viewport from './Viewport';
-import globalStyles from '../styles';
+import ProfileHeader from '../components/ProfileHeader';
+import ChipPreference from '../components/ChipPreference';
 
-import PulseWelcome from '../media/pulse-welcome.png';
-import HeaderLogo from '../media/pulse.jpg';
+import store from '../ducks/store';
 
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    alignItems: 'center'
-  },
-  welcome: {
-    width: 300,
-    height: 120,
-    borderRadius: 10,
-    marginVertical: 20,
-    marginTop: 240
+  container: {
+    margin: 10,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap'
   }
 });
 
-export default class Preference extends React.Component {
+class Preference extends React.Component {
   render() {
-    const { navigation } = this.props;
+    const { user, tags, preference } = this.props;
+    let prefMasterList = []; // holder
+
+    preference.map(el => {
+      prefMasterList.push({ tag: el, isPreferred: true });
+    });
+    tags.map(el => {
+      if (prefMasterList.find(foo => foo.tag === el)) {
+        // if element exists, skip
+      } else {
+        prefMasterList.push({ tag: el, isPreferred: false });
+      }
+    });
+
     return (
-      <Viewport navigation={navigation}>
-        <Text>Preference Screen</Text>
-      </Viewport>
+      <ScrollView>
+        <ProfileHeader {...user} />
+        <View style={styles.container}>
+          {prefMasterList.map((el, idx) => {
+            return <ChipPreference key={'chippref-' + idx} {...el} />;
+          })}
+        </View>
+      </ScrollView>
     );
   }
 }
+
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    user: state.auth,
+    tags: state.refs.tags,
+    preference: state.user.preference
+  };
+};
+
+export default connect(mapStateToProps)(Preference);

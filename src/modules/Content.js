@@ -43,8 +43,6 @@ export default class Content extends React.Component {
       img,
       navigation
     } = this.props.navigation.state.params;
-
-    console.log('authorId', authorId);
     const authorDetails = { ...kol.find(el => el.id === authorId) };
     return (
       <ScrollView>

@@ -9,6 +9,7 @@ import HeaderLogo from '../media/pulse.jpg';
 
 import currentUser from '../data/user'; // from remote
 import store from '../ducks/store';
+import { setUser } from '../ducks/actions/user';
 import { saveAuth } from '../ducks/actions/auth';
 
 const styles = StyleSheet.create({
@@ -31,6 +32,8 @@ export default class Home extends React.Component {
 
     const unsubscribe = store.subscribe(() => console.log(store.getState()));
     store.dispatch(saveAuth(currentUser));
+    store.dispatch(setUser(currentUser));
+
     return (
       <Viewport navigation={navigation}>
         <Image style={globalStyles.headerLogo} source={HeaderLogo} />

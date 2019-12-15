@@ -4,7 +4,8 @@ const user = {
   firstname: 'Eira',
   lastname: 'Borja',
   age: 21,
-  img: Eira
+  img: Eira,
+  preference: ['sports', 'running', 'workout', 'travel', 'healthyliving']
 };
 
 export default user;

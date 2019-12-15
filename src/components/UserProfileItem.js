@@ -8,7 +8,7 @@ export default class UserProfileItem extends React.Component {
   handlePress = details => {
     // handle others here as well
     if (details.navigation) {
-      details.navigation.navigate('Preference');
+      details.navigation.navigate('Preference', { ...details });
     }
   };
   render() {
