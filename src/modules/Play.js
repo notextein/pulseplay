@@ -3,6 +3,7 @@ import { Searchbar } from 'react-native-paper';
 
 import Feed from './Feed';
 import Profile from './Profile';
+import Viewport from './Viewport';
 
 export default class Play extends React.Component {
   state = {
@@ -15,7 +16,12 @@ export default class Play extends React.Component {
 
   render() {
     const { currentContent } = this.state;
+    const { navigation } = this.props;
 
-    return <Feed contentClickHandler={this.contentClickHandler} />;
+    return (
+      <Viewport navigation={navigation}>
+        <Feed contentClickHandler={this.contentClickHandler} />
+      </Viewport>
+    );
   }
 }

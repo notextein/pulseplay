@@ -2,6 +2,13 @@ import { StyleSheet } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
+  headerLogo: {
+    position: 'absolute',
+    width: 120,
+    height: 60,
+    left: 10,
+    top: 30
+  },
   scrollView: {
     backgroundColor: Colors.lighter
   },
@@ -15,26 +22,6 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 10,
     paddingHorizontal: 24
-  },
-  firstHomeButton: {
-    width: 300,
-    height: 120,
-    borderRadius: 10,
-    marginTop: 50,
-    marginBottom: 20
-  },
-  homeButtons: {
-    width: 300,
-    height: 120,
-    borderRadius: 10,
-    marginVertical: 20
-  },
-  headerLogo: {
-    position: 'absolute',
-    top: 50,
-    left: 10,
-    width: 120,
-    height: 60
   },
 
   sectionTitle: {

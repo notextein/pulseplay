@@ -1,15 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
 import { SafeAreaView, ScrollView, View, Text, Image } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
+import Viewport from './Viewport';
 import HorizontalRule from '../components/HorizontalRule';
 
 import styles from '../styles';
@@ -21,9 +14,10 @@ import UserProfileItem from '../components/UserProfileItem';
 
 export default class Profile extends React.Component {
   render() {
+    const { navigation } = this.props;
     return (
       <>
-        <SafeAreaView>
+        <Viewport navigation={navigation}>
           <View style={{ marginLeft: 30 }}>
             <View flexDirection='row' style={{ marginTop: 50 }}>
               <Avatar.Image size={120} source={currentUser.img} />
@@ -44,7 +38,7 @@ export default class Profile extends React.Component {
           <UserProfileItem name='Language' />
           <UserProfileItem name='Provide Feedback' />
           <UserProfileItem name='Legal and Privacy' />
-        </SafeAreaView>
+        </Viewport>
       </>
     );
   }
