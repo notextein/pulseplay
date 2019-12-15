@@ -40,7 +40,11 @@ export default class Profile extends React.Component {
         </View>
         <HorizontalRule />
         <UserProfileItem name='Customise' />
-        <UserProfileItem name='Feed Preferences' red={true} />
+        <UserProfileItem
+          name='Feed Preferences'
+          navigation={navigation}
+          red={true}
+        />
         <UserProfileItem name='Security' />
         <UserProfileItem name='Language' />
         <UserProfileItem name='Provide Feedback' />

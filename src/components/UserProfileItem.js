@@ -5,6 +5,12 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 import HorizontalRule from '../components/HorizontalRule';
 
 export default class UserProfileItem extends React.Component {
+  handlePress = details => {
+    // handle others here as well
+    if (details.navigation) {
+      details.navigation.navigate('Preference');
+    }
+  };
   render() {
     const { name, red } = this.props;
     const styles = {};
@@ -15,7 +21,7 @@ export default class UserProfileItem extends React.Component {
 
     return (
       <TouchableOpacity
-        onPress={() => console.log('pressed')}
+        onPress={() => this.handlePress({ ...this.props })}
         underlayColor='gray'
         activeOpacity={0.1}
       >

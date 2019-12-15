@@ -17,10 +17,6 @@ const screens = ['Home', 'Pulse', 'Feed', 'Profile'];
 export default class Viewport extends React.Component {
   render() {
     const { children, navigation } = this.props;
-
-    console.log('navigation', navigation);
-    console.log('state', this.state);
-
     return (
       <ScrollView>
         <View style={styles.main}>{children}</View>

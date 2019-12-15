@@ -1,11 +1,16 @@
-import {SAVE_AUTH} from '../actions/auth';
+import { SAVE_AUTH } from '../actions/auth';
+
+let initialState = {
+  user: {
+    test: true
+  }
+};
 
 export default function auth(state = initialState, action) {
   switch (action.type) {
     case SAVE_AUTH:
       return {
-          ...state,
-          action.auth
+        ...action.auth
       };
     default:
       return state;

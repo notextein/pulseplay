@@ -4,7 +4,14 @@ import { TouchableOpacity } from 'react-native';
 
 export default class Kol extends React.Component {
   handlePress = details => {
-    details.navigation.navigate('KolProfile');
+    const { id, img, firstname, lastname, fullname } = details;
+    details.navigation.navigate('KolProfile', {
+      id,
+      img,
+      firstname,
+      lastname,
+      fullname
+    });
   };
 
   render() {

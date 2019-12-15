@@ -5,6 +5,10 @@ import { Avatar } from 'react-native-paper';
 import styles from '../styles';
 
 export default class Article extends React.Component {
+  handlePress = details => {
+    details.navigation.navigate('Content', { ...details });
+  };
+
   render() {
     const {
       title,
@@ -12,11 +16,11 @@ export default class Article extends React.Component {
       author,
       datePublished,
       img,
-      contentClickHandler
+      navigation
     } = this.props;
     return (
       <TouchableOpacity
-        onPress={() => contentClickHandler(this.props)}
+        onPress={() => this.handlePress({ ...this.props })}
         underlayColor='gray'
         activeOpacity={0.1}
       >

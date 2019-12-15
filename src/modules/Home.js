@@ -7,6 +7,10 @@ import globalStyles from '../styles';
 import PulseWelcome from '../media/pulse-welcome.png';
 import HeaderLogo from '../media/pulse.jpg';
 
+import currentUser from '../data/user'; // from remote
+import store from '../ducks/store';
+import { saveAuth } from '../ducks/actions/auth';
+
 const styles = StyleSheet.create({
   main: {
     flex: 1,
@@ -24,6 +28,9 @@ const styles = StyleSheet.create({
 export default class Home extends React.Component {
   render() {
     const { navigation } = this.props;
+
+    const unsubscribe = store.subscribe(() => console.log(store.getState()));
+    store.dispatch(saveAuth(currentUser));
     return (
       <Viewport navigation={navigation}>
         <Image style={globalStyles.headerLogo} source={HeaderLogo} />

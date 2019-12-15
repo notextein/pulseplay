@@ -12,8 +12,7 @@ import HomeScreen from './src/modules/Home';
 import PulseScreen from './src/modules/Pulse';
 import FeedScreen from './src/modules/Feed';
 import ContentScreen from './src/modules/Content';
-
-import PlayScreen from './src/modules/Play';
+import KolProfileScreen from './src/modules/KolProfile';
 import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
 
@@ -31,6 +30,12 @@ const FeedStack = createStackNavigator({
     screen: ContentScreen,
     navigationOptions: {
       headerTitle: 'Content'
+    }
+  },
+  KolProfile: {
+    screen: KolProfileScreen,
+    navigationOptions: {
+      headerTitle: 'Key Opinion Leader'
     }
   }
 });

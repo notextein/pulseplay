@@ -13,18 +13,13 @@ import {
 import styles from '../styles';
 
 // components
-import Avatar from '../components/Avatar';
+import Kol from '../components/Kol';
 import Article from '../components/Article';
 import HorizontalRule from '../components/HorizontalRule';
 
 // media
+import kol from '../data/kol';
 import Banner from '../media/banner.jpg';
-import Drew from '../media/drew.jpg';
-import Erwan from '../media/erwan.jpg';
-import Gretchen from '../media/gretchen-ho.jpg';
-import Catriona from '../media/catriona.jpg';
-import MissU from '../media/miss-u.jpg';
-import Mimiyuuh from '../media/mimiyuuh.jpg';
 
 import articles from '../data/articles';
 
@@ -35,7 +30,7 @@ export default class Feed extends React.Component {
 
   render() {
     const { firstQuery } = this.state;
-    const { contentClickHandler } = this.props;
+    const { navigation } = this.props;
     return (
       <>
         <StatusBar barStyle='dark-content' />
@@ -70,9 +65,9 @@ export default class Feed extends React.Component {
                     flexDirection: 'row'
                   }}
                 >
-                  <Avatar img={Erwan} />
-                  <Avatar img={Gretchen} />
-                  <Avatar img={Drew} />
+                  <Kol {...kol[4]} navigation={navigation} />
+                  <Kol {...kol[1]} navigation={navigation} />
+                  <Kol {...kol[8]} navigation={navigation} />
                 </View>
               </View>
               <HorizontalRule />
@@ -84,20 +79,16 @@ export default class Feed extends React.Component {
                     flexDirection: 'row'
                   }}
                 >
-                  <Avatar img={Catriona} />
-                  <Avatar img={MissU} />
-                  <Avatar img={Mimiyuuh} />
+                  <Kol {...kol[9]} navigation={navigation} />
+                  <Kol {...kol[10]} navigation={navigation} />
+                  <Kol {...kol[7]} navigation={navigation} />
                 </View>
               </View>
               <HorizontalRule />
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Your latest Pulse:</Text>
                 {articles.map((el, idx) => (
-                  <Article
-                    key={idx}
-                    {...el}
-                    contentClickHandler={contentClickHandler}
-                  />
+                  <Article key={idx} navigation={navigation} {...el} />
                 ))}
               </View>
             </View>
