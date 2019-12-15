@@ -18,9 +18,10 @@ import Article from '../components/Article';
 import HorizontalRule from '../components/HorizontalRule';
 
 // media
-import kol from '../data/kol';
 import Banner from '../media/banner.jpg';
 
+// data
+import kol from '../data/kol';
 import articles from '../data/articles';
 
 export default class Feed extends React.Component {

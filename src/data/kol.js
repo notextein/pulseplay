@@ -13,59 +13,59 @@ import MissU from '../media/miss-u.jpg';
 
 const kol = [
   {
-    id: 1,
+    id: 0,
     img: Nikki,
     fullname: 'Nikki Torres',
     firstname: 'Nikki',
     lastname: 'Torres'
   },
   {
-    id: 2,
+    id: 1,
     img: Gretchen,
     fullname: 'Gretchen Ho',
     firstname: 'Gretchen',
     lastname: 'Ho'
   },
   {
-    id: 3,
+    id: 2,
     img: Gunnars,
     fullname: 'Chris Gunnars',
     firstname: 'Chris',
     lastname: 'Gunnars'
   },
   {
-    id: 4,
+    id: 3,
     img: DrSison,
     fullname: 'Dr. Gia Sison',
     firstname: 'Dr. Gia',
     lastname: 'Sison'
   },
   {
-    id: 5,
+    id: 4,
     img: Erwan,
     fullname: 'Erwan Heussaff',
     firstname: 'Erwan',
     lastname: 'Heussaff'
   },
-  { id: 6, img: Who, fullname: 'World Health Organization' },
-  { id: 7, img: Doh, fullname: 'Department of Health' },
-  { id: 8, img: Mimiyuuh, fullname: 'Mimiyuuh' },
+  { id: 5, img: Who, fullname: 'World Health Organization' },
+  { id: 6, img: Doh, fullname: 'Department of Health' },
+  { id: 7, img: Mimiyuuh, fullname: 'Mimiyuuh' },
   {
-    id: 9,
+    id: 8,
     img: Drew,
     fullname: 'Drew Arellano',
     firstname: 'Drew',
     lastname: 'Arellano'
   },
   {
-    id: 10,
+    id: 9,
     img: Catriona,
     fullname: 'Catriona Gray',
     firstname: 'Catriona',
     lastname: 'Gray'
   },
   {
-    id: 11,
+    id: 10,
     img: MissU,
     fullname: 'Zozibini Tunzi',
     firstname: 'Zozibini',

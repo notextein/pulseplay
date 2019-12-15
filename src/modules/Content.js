@@ -1,42 +1,65 @@
 import React from 'react';
-import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  ScrollView,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  StyleSheet
+} from 'react-native';
+import ProfileHeader from '../components/ProfileHeader';
 
-import Viewport from './Viewport';
-import globalStyles from '../styles';
-
-import PulseWelcome from '../media/pulse-welcome.png';
-import HeaderLogo from '../media/pulse.jpg';
+// data
+import kol from '../data/kol';
 
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    alignItems: 'center'
+  container: {
+    margin: 20
   },
-  welcome: {
-    width: 300,
-    height: 120,
-    borderRadius: 10,
-    marginVertical: 20,
-    marginTop: 240
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#4D4E4F'
+  },
+  subtitle: {
+    fontSize: 12,
+    opacity: 0.8,
+    color: '#4D4E4F'
+  },
+  content: {
+    fontSize: 16,
+    marginTop: 25
   }
 });
 
 export default class Content extends React.Component {
   render() {
-    const { navigation } = this.props;
+    const {
+      authorId,
+      title,
+      content,
+      author,
+      datePublished,
+      img,
+      navigation
+    } = this.props.navigation.state.params;
+
+    console.log('authorId', authorId);
+    const authorDetails = { ...kol.find(el => el.id === authorId) };
     return (
-      <Viewport navigation={navigation}>
-        <Image style={globalStyles.headerLogo} source={HeaderLogo} />
-        <View style={styles.main}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Pulse')}
-            underlayColor='gray'
-            activeOpacity={0.1}
-          >
-            <Image style={styles.welcome} source={PulseWelcome} />
-          </TouchableOpacity>
+      <ScrollView>
+        <ProfileHeader
+          {...this.props.navigation.state.params}
+          {...authorDetails}
+        />
+        <View style={styles.container}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>
+            By {author} on {datePublished}
+          </Text>
+          <Text style={styles.content}>{content}</Text>
         </View>
-      </Viewport>
+      </ScrollView>
     );
   }
 }

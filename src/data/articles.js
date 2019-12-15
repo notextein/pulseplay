@@ -3,6 +3,7 @@ import kol from './kol'; // should be a feed
 const articles = [
   {
     title: 'Polio outbreak in the Philippines',
+    authorId: 5,
     img: kol[5].img,
     author: kol[5].fullname,
     datePublished: '6:25AM, Sept. 12, 2019',
@@ -17,6 +18,7 @@ const articles = [
 
   {
     title: 'My 10-Day Detox Diary',
+    authorId: 0,
     img: kol[0].img,
     author: kol[0].fullname,
     datePublished: '7:29AM, Dec. 12, 2019',
@@ -29,6 +31,7 @@ const articles = [
   {
     title:
       'ON WORLD AIDS DAY, COMMUNITIES CAN MAKE A DIFFERENCE IN THE LIVES OF PLHIV',
+    authorId: 6,
     img: kol[6].img,
     author: kol[6].fullname,
     datePublished: 'Nov. 30, 2019',
@@ -47,6 +50,7 @@ const articles = [
   },
   {
     title: '5 self-care practices that keep Gretchen Ho fresh',
+    authorId: 1,
     img: kol[1].img,
     author: kol[1].fullname,
     datePublished: '12:45PM, Dec. 11, 2019',
@@ -56,6 +60,7 @@ const articles = [
   },
   {
     title: '27 Health and Nutrition Tips That Are Actually Evidence-Based',
+    authorId: 2,
     img: kol[2].img,
     author: kol[2].fullname,
     datePublished: '2:45PM, Dec. 10, 2019',
@@ -64,6 +69,7 @@ const articles = [
   {
     title:
       'Filipino mental health advocate and cancer survivor gives back using Twitter',
+    authorId: 3,
     img: kol[3].img,
     author: kol[3].fullname,
     datePublished: '8:10AM, Dec. 09, 2019',
@@ -73,6 +79,7 @@ const articles = [
   },
   {
     title: 'The Fat Kid Inside 1-Week Meal Plan',
+    authorId: 4,
     img: kol[4].img,
     author: kol[4].fullname,
     datePublished: '9:45AM, Dec. 08, 2019',
