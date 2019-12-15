@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import Viewport from './Viewport';
 import globalStyles from '../styles';
@@ -21,21 +21,12 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class Content extends React.Component {
+export default class Preference extends React.Component {
   render() {
     const { navigation } = this.props;
     return (
       <Viewport navigation={navigation}>
-        <Image style={globalStyles.headerLogo} source={HeaderLogo} />
-        <View style={styles.main}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Pulse')}
-            underlayColor='gray'
-            activeOpacity={0.1}
-          >
-            <Image style={styles.welcome} source={PulseWelcome} />
-          </TouchableOpacity>
-        </View>
+        <Text>Preference Screen</Text>
       </Viewport>
     );
   }
