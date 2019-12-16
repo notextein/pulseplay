@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   header: {
+    margin: 10,
     fontSize: 18,
     fontWeight: 'bold',
     color: '#4D4E4F'
@@ -40,8 +41,8 @@ class Preference extends React.Component {
     return (
       <ScrollView>
         <ProfileHeader {...user} />
-        <View style={styles.header}>
-          <Text>What interests you?</Text>
+        <View>
+          <Text style={styles.header}>What interests you?</Text>
         </View>
         <View style={styles.container}>
           {prefMasterList.map((el, idx) => {
