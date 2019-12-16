@@ -1,6 +1,7 @@
 // // let fs = require('fs');
 // let request = require('request');
 
+import store from '../ducks/store';
 // const HOST = 'http://64.225.6.174:10001'; // live
 const HOST = 'http://64.225.6.174:10001'; // test
 
@@ -24,6 +25,7 @@ const api = {
   post: (bean, data, callback) => {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
+    formdata.append('token', store.getState().auth.token);
     const config = {
       method: 'POST',
       headers: {
@@ -43,6 +45,7 @@ const api = {
   upload: (bean, data, callback) => {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
+    formdata.append('token', store.getState().auth.token);
     // media does not currently work
     // data.append('media_file', {
     //   uri: response.uri,
