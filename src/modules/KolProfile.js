@@ -23,8 +23,6 @@ export default class KolProfile extends React.Component {
       }
     });
 
-    console.log('posts!!!');
-    console.table(posts);
     return (
       <ScrollView>
         <ProfileHeader {...this.props.navigation.state.params} />

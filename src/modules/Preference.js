@@ -59,8 +59,6 @@ class Preference extends React.Component {
       filtered = [...prefMasterList];
     }
 
-    console.table(filtered);
-
     return (
       <ScrollView>
         <ProfileHeader {...user} />
