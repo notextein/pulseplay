@@ -44,7 +44,7 @@ const ProfileStack = createStackNavigator({
   Profile: {
     screen: ProfileScreen,
     navigationOptions: {
-      headerTitle: 'Profile'
+      headerTitle: 'Your Profile'
     }
   },
   Preference: {

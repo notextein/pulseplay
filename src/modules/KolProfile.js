@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import ProfileHeader from '../components/ProfileHeader';
 
 export default class KolProfile extends React.Component {

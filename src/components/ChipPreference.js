@@ -28,7 +28,7 @@ export default class ChipPreference extends React.Component {
         selected={isPreferred}
         onPress={() => this.togglePreference(tag, isPreferred)}
       >
-        {tag}
+        #{tag}
       </Chip>
     );
   }

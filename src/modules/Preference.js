@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, View, StyleSheet } from 'react-native';
-import { Chip } from 'react-native-paper';
+import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
 import ProfileHeader from '../components/ProfileHeader';
 import ChipPreference from '../components/ChipPreference';
@@ -14,6 +13,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     flexWrap: 'wrap'
+  },
+  header: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#4D4E4F'
   }
 });
 
@@ -36,6 +40,9 @@ class Preference extends React.Component {
     return (
       <ScrollView>
         <ProfileHeader {...user} />
+        <View style={styles.header}>
+          <Text>What interests you?</Text>
+        </View>
         <View style={styles.container}>
           {prefMasterList.map((el, idx) => {
             return <ChipPreference key={'chippref-' + idx} {...el} />;
