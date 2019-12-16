@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
+import { Image, TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 import ChipTag from './ChipTag';
 
 import api from '../api';
+import host from '../api/host';
 
 const styles = StyleSheet.create({
   articleSnippet: {
@@ -47,6 +48,9 @@ const styles = StyleSheet.create({
 });
 
 export default class Article extends React.Component {
+  state = {
+    thumbnail: this.props.thumbnail
+  };
   handlePress = details => {
     const { id } = details;
     api.get('/bean/find/post/' + id, p => {
@@ -68,6 +72,8 @@ export default class Article extends React.Component {
       tags,
       navigation
     } = this.props;
+
+    const { thumbnail } = this.state;
 
     let tagsArr = [];
     if (tags) {
@@ -96,7 +102,6 @@ export default class Article extends React.Component {
               <ChipTag key={'art-tag-' + idx} tag={el} />
             ))}
           </View>
-
           <Text
             style={styles.articleSnippetContent}
             ellipsizeMode='tail'
@@ -104,16 +109,16 @@ export default class Article extends React.Component {
           >
             {caption}
           </Text>
-
           <View style={styles.articleSnippetReadMore}>
             <Text>Continue reading...</Text>
           </View>
-          {/* 
           <Avatar.Image
             style={styles.articleSnippetAvatar}
             size={40}
-            source={img}
-          /> */}
+            source={{
+              uri: host + '/bean/media/' + thumbnail
+            }}
+          />
         </View>
       </TouchableOpacity>
     );

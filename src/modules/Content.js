@@ -15,6 +15,7 @@ import ChipTag from '../components/ChipTag';
 // data
 import kol from '../data/kol';
 import api from '../api';
+import host from '../api/host';
 
 const styles = StyleSheet.create({
   container: {
@@ -56,7 +57,8 @@ export default class Content extends React.Component {
       content,
       author,
       postDate,
-      img,
+      media,
+      preview,
       tags,
       navigation
     } = this.props.navigation.state.params;
@@ -93,6 +95,19 @@ export default class Content extends React.Component {
               Bookmark
             </Button>
           </View>
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          ></View>
+          {preview && (
+            <Image
+              style={{ width: 240, height: 120 }}
+              resizeMode='center'
+              source={{
+                uri: host + '/bean/media/' + preview
+              }}
+            />
+          )}
+
           <Text style={styles.content}>{content}</Text>
           <Text style={styles.related}>Related articles here...</Text>
         </View>

@@ -19,6 +19,7 @@ import store from '../ducks/store';
 import cat from '../media/catriona.jpg';
 
 import api from '../api';
+// var fs = require('fs');
 
 const styles = StyleSheet.create({
   container: {
@@ -70,23 +71,28 @@ export default class Post extends React.Component {
     // hijack these for now
     data.owner = 'Eira Borja';
     data.postDate = new Date();
-    api.upload('/bean/create/post', data, p => {
-      if (p.success) {
-        this.setState({ visible: true });
-        setTimeout(() => {
-          this.setState({
-            visible: true,
-            title: 'Post title...',
-            content: 'Post content...',
-            url: 'Post url (optional)...',
-            imageSource: null,
-            ...this.props
-          });
-          nav.navigate('Home');
-        }, 5000);
-      } else {
-      }
-    });
+    const fileSrc = {
+      // value: fs.createReadStream(this.state.imageSource)
+    };
+
+    console.log('whelp', this.state.imageSource);
+    // api.upload('/bean/create/post', data, fileSrc, p => {
+    //   if (p.success) {
+    //     this.setState({ visible: true });
+    //     setTimeout(() => {
+    //       this.setState({
+    //         visible: true,
+    //         title: 'Post title...',
+    //         content: 'Post content...',
+    //         url: 'Post url (optional)...',
+    //         imageSource: null,
+    //         ...this.props
+    //       });
+    //       nav.navigate('Home');
+    //     }, 5000);
+    //   } else {
+    //   }
+    // });
   };
 
   showImagePicker = () => {
@@ -103,7 +109,8 @@ export default class Post extends React.Component {
       } else {
         // const source = { uri: response.uri };
         // You can also display the image using data:
-        const source = { uri: 'data:image/jpeg;base64,' + response.data };
+        // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+        const source = { uri: response.uri };
         this.setState({
           imageSource: source
         });

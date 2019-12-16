@@ -42,16 +42,11 @@ const api = {
         console.log('get err!!!!!', err);
       });
   },
-  upload: (bean, data, callback) => {
+  upload: (bean, data, fileSrc, callback) => {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
     formdata.append('token', store.getState().auth.token);
-    // media does not currently work
-    // data.append('media_file', {
-    //   uri: response.uri,
-    //   type: response.type,
-    //   name: response.fileName
-    // });
+    formdata.append('media_file', fileSrc);
     const config = {
       method: 'POST',
       headers: {
