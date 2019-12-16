@@ -2,28 +2,30 @@ import * as React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
+import ChipTag from './ChipTag';
+
 const styles = StyleSheet.create({
   articleSnippet: {
     borderRadius: 4,
     borderWidth: 0.5,
     padding: 10,
     marginVertical: 5,
-    height: 175,
+    height: 240,
     borderColor: '#d6d7da'
   },
   articleSnippetTitle: {
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#4D4E4F'
   },
   articleSnippetAuthor: {
-    fontSize: 11,
+    fontSize: 12,
     opacity: 0.8,
     color: '#4D4E4F'
   },
   articleSnippetContent: {
-    padding: 10,
     fontSize: 12,
+    padding: 10,
     alignItems: 'center'
   },
   articleSnippetAvatar: {
@@ -55,6 +57,7 @@ export default class Article extends React.Component {
       author,
       datePublished,
       img,
+      tags,
       navigation
     } = this.props;
     return (
@@ -68,6 +71,18 @@ export default class Article extends React.Component {
           <Text style={styles.articleSnippetAuthor}>
             By {author} on {datePublished}
           </Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              flexWrap: 'wrap'
+            }}
+          >
+            {tags.map((el, idx) => (
+              <ChipTag key={'art-tag-' + idx} tag={el} />
+            ))}
+          </View>
+
           <Text
             style={styles.articleSnippetContent}
             ellipsizeMode='tail'

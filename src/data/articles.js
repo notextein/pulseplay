@@ -23,15 +23,7 @@ const articles = [
     img: kol[0].img,
     author: kol[0].fullname,
     datePublished: '7:29AM, Dec. 12, 2019',
-    tags: [
-      'weightloss',
-      'lifestyle',
-      'healthy',
-      'healthyliving',
-      'yoga',
-      'diet',
-      'eatclean'
-    ],
+    tags: ['weightloss', 'diet', 'eatclean'],
     content: `If you follow my Instagram stories, you’ll know that I just recently went through a 10-day detox/juice cleanse. Over the past years, there have been plenty of different views on the practice of juicing after the trend has exploded in 2011-2012.
 
     Just to make it clear, juicing is not primarily for weight loss. It isn’t a crash diet. The weight you lose in the duration of the cleanse is merely water weight and you’ll most likely gain it back after. What it is though, is a natural means of healing, allowing your body to focus its energy on flushing toxins out on its own with the support of nutrients of, you know it– cold-pressed juice. Is it a diet? It’s not. You can’t live off of cold-pressed juice for a long period of time because of the absence of fiber, protein and fat to name a few. However, juices are rich in a ton of micronutrients and are so potent that your body will actually thrive in them during your cleanse.
@@ -76,14 +68,7 @@ const articles = [
     img: kol[2].img,
     author: kol[2].fullname,
     datePublished: '2:45PM, Dec. 10, 2019',
-    tags: [
-      'weightloss',
-      'lifestyle',
-      'healthy',
-      'healthyliving',
-      'diet',
-      'eatclean'
-    ],
+    tags: ['weightloss', 'lifestyle', 'healthy'],
     content: `It’s easy to get confused when it comes to health and nutrition. Even qualified experts often seem to hold opposing opinions. Yet, despite all the disagreements, a number of wellness tips are well supported by research. Here are 27 health and nutrition tips that are actually based on good science.`
   },
   {
@@ -103,14 +88,7 @@ const articles = [
     authorId: 4,
     img: kol[4].img,
     author: kol[4].fullname,
-    tags: [
-      'weightloss',
-      'lifestyle',
-      'healthy',
-      'healthyliving',
-      'diet',
-      'eatclean'
-    ],
+    tags: ['healthy', 'diet', 'eatclean'],
     datePublished: '9:45AM, Dec. 08, 2019',
     content: `Meal planning can seem like it takes a lot of work at first, but you’ll be saving yourself lots of time if you think about it. This meal plan is prepped, cooked, and arranged in just 90 minutes. Compare that to an hour it takes each day to make one meal!`
   }

@@ -7,7 +7,10 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
+import { Button } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import ProfileHeader from '../components/ProfileHeader';
+import ChipTag from '../components/ChipTag';
 
 // data
 import kol from '../data/kol';
@@ -17,7 +20,7 @@ const styles = StyleSheet.create({
     margin: 20
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#4D4E4F'
   },
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
     color: '#4D4E4F'
   },
   content: {
-    fontSize: 16,
+    fontSize: 14,
     marginTop: 25
   },
   related: {
@@ -35,6 +38,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#4D4E4F'
+  },
+  tags: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap'
   }
 });
 
@@ -47,6 +55,7 @@ export default class Content extends React.Component {
       author,
       datePublished,
       img,
+      tags,
       navigation
     } = this.props.navigation.state.params;
     const authorDetails = { ...kol.find(el => el.id === authorId) };
@@ -61,6 +70,21 @@ export default class Content extends React.Component {
           <Text style={styles.subtitle}>
             By {author} on {datePublished}
           </Text>
+          <View style={styles.tags}>
+            {tags.map((el, idx) => (
+              <ChipTag key={'art-tag-' + idx} tag={el} />
+            ))}
+          </View>
+          <View style={{ marginTop: 20, alignItems: 'flex-start' }}>
+            <Button
+              icon='bookmark'
+              mode='contained'
+              color='#68737a'
+              onPress={() => console.log('Pressed')}
+            >
+              Bookmark
+            </Button>
+          </View>
           <Text style={styles.content}>{content}</Text>
           <Text style={styles.related}>Related articles here...</Text>
         </View>
