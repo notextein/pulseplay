@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, View, StyleSheet } from 'react-native';
+import { Searchbar } from 'react-native-paper';
 
 import ProfileHeader from '../components/ProfileHeader';
 import ChipPreference from '../components/ChipPreference';
+import Spacer from '../components/Spacer';
 
 import store from '../ducks/store';
 
@@ -23,9 +25,15 @@ const styles = StyleSheet.create({
 });
 
 class Preference extends React.Component {
+  state = {
+    query: ''
+  };
+
   render() {
     const { user, tags, preference } = this.props;
-    let prefMasterList = []; // holder
+    const { query } = this.state;
+    let prefMasterList = [],
+      filtered = []; // holder
 
     preference.map(el => {
       prefMasterList.push({ tag: el, isPreferred: true });
@@ -38,6 +46,21 @@ class Preference extends React.Component {
       }
     });
 
+    if (query) {
+      prefMasterList.map(el => {
+        let tag = el.tag.toLowerCase();
+        if (tag.search(query) === -1) {
+          // not found. ignore or handle if you want
+        } else {
+          filtered.push({ ...el });
+        }
+      });
+    } else {
+      filtered = [...prefMasterList];
+    }
+
+    console.table(filtered);
+
     return (
       <ScrollView>
         <ProfileHeader {...user} />
@@ -45,7 +68,15 @@ class Preference extends React.Component {
           <Text style={styles.header}>What interests you?</Text>
         </View>
         <View style={styles.container}>
-          {prefMasterList.map((el, idx) => {
+          <Searchbar
+            placeholder='Search for tags...'
+            onChangeText={text => {
+              this.setState({ query: text.toLowerCase() });
+            }}
+            value={query}
+          />
+          <Spacer px={60} />
+          {filtered.map((el, idx) => {
             return <ChipPreference key={'chippref-' + idx} {...el} />;
           })}
         </View>

@@ -62,7 +62,7 @@ export default class Feed extends React.Component {
             <Searchbar
               placeholder='Search for the latest Pulse...'
               onChangeText={text => {
-                // this.updateQuery(text);
+                this.setState({ query: text });
               }}
               value={query}
             />
