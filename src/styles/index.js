@@ -46,6 +46,12 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right'
+  },
+  accent: {
+    color: '#68737a'
+  },
+  primary: {
+    color: '#ed1b2c'
   }
 });
 

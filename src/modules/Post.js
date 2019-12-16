@@ -129,7 +129,7 @@ export default class Post extends React.Component {
           <TextInput
             placeholder='Tell us more...'
             style={{
-              height: 180,
+              height: 160,
               marginVertical: 5,
               borderColor: 'gray',
               borderWidth: 1
@@ -153,12 +153,12 @@ export default class Post extends React.Component {
               // style={styles.uploadAvatar}
             />
           )} */}
-          <TextInput
+          {/* <TextInput
             placeholder='Url...'
             style={styles.default}
             onChangeText={text => this.setState({ url: text })}
             value={url}
-          />
+          /> */}
           <PostSelection
             onPress={this.showImagePicker}
             icon={'photo'}

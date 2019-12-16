@@ -20,18 +20,25 @@ const api = {
         console.log('get err!!!!!', err);
       });
   },
-  //   post: (bean, data) => {
-  //     let options = {
-  //       method: 'POST',
-  //       url: Host + bean
-  //     };
+  post: (bean, data, callback) => {
+    const formdata = new FormData();
+    formdata.append('data', JSON.stringify(data));
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: formdata
+    };
 
-  //     // request(options, function(error, response, body) {
-  //     //   if (error) throw new Error(error);
-
-  //     //   console.log(body);
-  //     // });
-  //   },
+    fetch(HOST + bean, config)
+      .then(response => response.json())
+      .then(json => callback(json))
+      .catch(err => {
+        callback(err);
+        console.log('get err!!!!!', err);
+      });
+  },
   upload: (bean, data, callback) => {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));

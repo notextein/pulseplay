@@ -51,15 +51,22 @@ export default class Article extends React.Component {
 
   render() {
     const {
+      id,
       authorId,
       title,
-      content,
+      caption,
       author,
-      datePublished,
+      postDate,
       img,
       tags,
       navigation
     } = this.props;
+
+    let tagsArr = [];
+    if (tags) {
+      tagsArr = tags.split(' ');
+    }
+
     return (
       <TouchableOpacity
         onPress={() => this.handlePress({ ...this.props })}
@@ -69,7 +76,7 @@ export default class Article extends React.Component {
         <View style={styles.articleSnippet}>
           <Text style={styles.articleSnippetTitle}>{title}</Text>
           <Text style={styles.articleSnippetAuthor}>
-            By {author} on {datePublished}
+            By test author on {postDate}
           </Text>
           <View
             style={{
@@ -78,7 +85,7 @@ export default class Article extends React.Component {
               flexWrap: 'wrap'
             }}
           >
-            {tags.map((el, idx) => (
+            {tagsArr.map((el, idx) => (
               <ChipTag key={'art-tag-' + idx} tag={el} />
             ))}
           </View>
@@ -88,17 +95,18 @@ export default class Article extends React.Component {
             ellipsizeMode='tail'
             numberOfLines={4}
           >
-            {content}
+            {caption}
           </Text>
+
           <View style={styles.articleSnippetReadMore}>
             <Text>Continue reading...</Text>
           </View>
-
+          {/* 
           <Avatar.Image
             style={styles.articleSnippetAvatar}
             size={40}
             source={img}
-          />
+          /> */}
         </View>
       </TouchableOpacity>
     );

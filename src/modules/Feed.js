@@ -8,7 +8,8 @@ import {
   View,
   Text,
   Image,
-  StatusBar
+  StatusBar,
+  ActivityIndicator
 } from 'react-native';
 
 import styles from '../styles';
@@ -24,13 +25,14 @@ import Health from '../media/health-check.png';
 
 // data
 import kol from '../data/kol';
-import articles from '../data/articles';
+// import articles from '../data/articles';
 
 import currentUser from '../data/user'; // from remote
 import store from '../ducks/store';
 import { setUser } from '../ducks/actions/user';
 import { saveAuth, saveSearchQuery } from '../ducks/actions/auth';
 import { fetchTags } from '../ducks/actions/refs';
+import { saveFeeds } from '../ducks/actions/feed';
 
 import api from '../api';
 
@@ -39,8 +41,9 @@ export default class Feed extends React.Component {
     super(props);
     this.state = {
       query: '',
-      filtered: []
-      // ...this.props // to overwrite base prop
+      filtered: [],
+      articles: [],
+      ...this.props // to overwrite base prop
     };
   }
 
@@ -49,16 +52,18 @@ export default class Feed extends React.Component {
 
     // store.dispatch(saveSearchQuery(query));
   };
+
   render() {
-    const unsubscribe = store.subscribe(() => console.log(store.getState()));
+    // const unsubscribe = store.subscribe(() => console.log(store.getState()));
     if (!store.getState().user.id) {
       store.dispatch(saveAuth(currentUser));
       store.dispatch(setUser(currentUser));
     }
 
-    const { query } = this.state;
+    const { query, articles } = this.state;
     const { navigation } = this.props;
 
+    // fetch tags
     api.get('/bean/query/getTags', p => {
       if (p.success) {
         let tagsArr = [];
@@ -69,6 +74,22 @@ export default class Feed extends React.Component {
         store.dispatch(fetchTags(tagsArr));
       }
     });
+
+    // fetch feeds
+    if (this.state.articles.length == 0) {
+      api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
+        if (p.success) {
+          console.log('searchPost query');
+          // store.dispatch(saveFeeds(p.result));
+          this.setState({ articles: p.result });
+          // this.setState({ articles: [{ title: 'ito na po', owner: 'ako' }] });
+        }
+      });
+    }
+
+    const shouldRender = articles.length > 0;
+    console.log('this.state!!!', this.state);
+    console.log('shouldRender!!!', shouldRender);
 
     return (
       <>
@@ -142,9 +163,10 @@ export default class Feed extends React.Component {
               <HorizontalRule />
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Your latest Pulse:</Text>
-                {articles.map((el, idx) => (
-                  <Article key={idx} navigation={navigation} {...el} />
-                ))}
+                {shouldRender &&
+                  articles.map((el, idx) => (
+                    <Article key={idx} navigation={navigation} {...el} />
+                  ))}
               </View>
             </View>
           </ScrollView>
@@ -156,10 +178,7 @@ export default class Feed extends React.Component {
 
 // const mapStateToProps = (state /*, ownProps*/) => {
 //   return {
-//     user: state.auth,
-//     tags: state.refs.tags,
-//     preference: state.user.preference,
-//     query: state.user.searchQuery
+//     articles: state.feed
 //   };
 // };
 
