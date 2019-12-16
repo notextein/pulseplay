@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Searchbar } from 'react-native-paper';
 
 import {
+  TouchableOpacity,
   SafeAreaView,
   ScrollView,
   View,
@@ -19,6 +20,7 @@ import HorizontalRule from '../components/HorizontalRule';
 
 // media
 import Banner from '../media/banner.jpg';
+import Health from '../media/health-check.png';
 
 // data
 import kol from '../data/kol';
@@ -54,7 +56,17 @@ export default class Feed extends React.Component {
                 alignItems: 'center'
               }}
             >
-              <Image style={{ width: 420, height: 150 }} source={Banner} />
+              <TouchableOpacity
+                onPress={() => console.log('pressed')}
+                underlayColor='gray'
+                activeOpacity={0.1}
+              >
+                {/* <Image style={{ width: 420, height: 150 }} source={Banner} /> */}
+                <Image
+                  style={{ width: 420, height: 150, resizeMode: 'contain' }}
+                  source={Health}
+                />
+              </TouchableOpacity>
             </View>
 
             <View style={styles.body}>

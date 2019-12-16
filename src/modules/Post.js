@@ -103,7 +103,7 @@ export default class Post extends React.Component {
           <TextInput
             placeholder='Tell us more...'
             style={{
-              height: 200,
+              height: 180,
               marginVertical: 5,
               borderColor: 'gray',
               borderWidth: 1
@@ -145,6 +145,7 @@ export default class Post extends React.Component {
             icon='arrow-left'
             mode='contained'
             color='#e8e4c9'
+            width={120}
             onPress={() => navigation.goBack()}
           >
             Cancel
@@ -154,6 +155,8 @@ export default class Post extends React.Component {
             icon='content-save'
             mode='contained'
             color='#68737a'
+            width={120}
+            // color='#ed1b2c'
             onPress={() => navigation.goBack()}
           >
             Save

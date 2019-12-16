@@ -66,7 +66,7 @@ const PostStack = createStackNavigator({
 
 const TabNavigator = createBottomTabNavigator({
   Home: {
-    screen: HomeScreen,
+    screen: FeedStack,
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => (
@@ -92,15 +92,15 @@ const TabNavigator = createBottomTabNavigator({
       )
     }
   },
-  Feed: {
-    screen: FeedStack,
-    navigationOptions: {
-      tabBarLabel: 'Feed',
-      tabBarIcon: ({ tintColor }) => (
-        <MCIcon name='pulse' color={tintColor} size={25} />
-      )
-    }
-  },
+  // Feed: {
+  //   screen: FeedStack,
+  //   navigationOptions: {
+  //     tabBarLabel: 'Feed',
+  //     tabBarIcon: ({ tintColor }) => (
+  //       <MCIcon name='pulse' color={tintColor} size={25} />
+  //     )
+  //   }
+  // },
   Profile: {
     screen: ProfileStack,
     navigationOptions: {
