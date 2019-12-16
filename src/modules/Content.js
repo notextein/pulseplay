@@ -14,6 +14,7 @@ import ChipTag from '../components/ChipTag';
 
 // data
 import kol from '../data/kol';
+import api from '../api';
 
 const styles = StyleSheet.create({
   container: {
@@ -49,29 +50,36 @@ const styles = StyleSheet.create({
 export default class Content extends React.Component {
   render() {
     const {
+      id,
       authorId,
       title,
       content,
       author,
-      datePublished,
+      postDate,
       img,
       tags,
       navigation
     } = this.props.navigation.state.params;
-    const authorDetails = { ...kol.find(el => el.id === authorId) };
+
+    console.log('content.props!!!!', this.props.navigation.state.params);
+
+    let tagsArr = [];
+    if (tags) {
+      tagsArr = tags.split(' ');
+    }
+
     return (
       <ScrollView>
-        <ProfileHeader
+        {/* <ProfileHeader
           {...this.props.navigation.state.params}
           {...authorDetails}
         />
+        */}
         <View style={styles.container}>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.subtitle}>
-            By {author} on {datePublished}
-          </Text>
+          <Text style={styles.subtitle}>By test author on {postDate}</Text>
           <View style={styles.tags}>
-            {tags.map((el, idx) => (
+            {tagsArr.map((el, idx) => (
               <ChipTag key={'art-tag-' + idx} tag={el} />
             ))}
           </View>

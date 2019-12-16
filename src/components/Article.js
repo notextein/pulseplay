@@ -4,6 +4,8 @@ import { Avatar } from 'react-native-paper';
 
 import ChipTag from './ChipTag';
 
+import api from '../api';
+
 const styles = StyleSheet.create({
   articleSnippet: {
     borderRadius: 4,
@@ -46,7 +48,12 @@ const styles = StyleSheet.create({
 
 export default class Article extends React.Component {
   handlePress = details => {
-    details.navigation.navigate('Content', { ...details });
+    const { id } = details;
+    api.get('/bean/find/post/' + id, p => {
+      if (p.success) {
+        details.navigation.navigate('Content', { ...p.result[0] });
+      }
+    });
   };
 
   render() {

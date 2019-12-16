@@ -8,6 +8,7 @@ import {
   StyleSheet
 } from 'react-native';
 import { Button } from 'react-native-paper';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import Viewport from './Viewport';
 import globalStyles from '../styles';
@@ -15,6 +16,8 @@ import globalStyles from '../styles';
 import HeaderLogo from '../media/pulse.jpg';
 
 import api from '../api';
+import store from '../ducks/store';
+import { saveAuth } from '../ducks/actions/auth';
 
 const styles = StyleSheet.create({
   default: {
@@ -41,17 +44,42 @@ export default class Login extends React.Component {
       email: this.state.username,
       password: this.state.password
     };
+
     api.post('/bean/token', data, p => {
-      console.log('p', p);
       if (p.success) {
         nav.navigate('Feed');
       }
     });
   };
 
+  getAuth = async () => {
+    try {
+      const auth = await AsyncStorage.getItem('@auth');
+      store.dispatch(saveAuth(auth));
+      return auth;
+    } catch (e) {
+      // error reading value
+      console.log('Error on Auth', e);
+      return null;
+    }
+  };
+
+  storeAuth = async auth => {
+    try {
+      await AsyncStorage.setItem('@auth', auth);
+    } catch (e) {
+      // saving error
+    }
+  };
+
   render() {
     const { username, password } = this.state;
     const { navigation } = this.props;
+
+    if (this.getAuth()) {
+      navigation.navigate('Feed');
+    }
+
     return (
       <View>
         <Image style={globalStyles.headerLogo} source={HeaderLogo} />

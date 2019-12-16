@@ -88,8 +88,6 @@ export default class Feed extends React.Component {
     }
 
     const shouldRender = articles.length > 0;
-    console.log('this.state!!!', this.state);
-    console.log('shouldRender!!!', shouldRender);
 
     return (
       <>
