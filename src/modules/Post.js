@@ -69,7 +69,7 @@ export default class Post extends React.Component {
     // this.setState({ visible: true });
     // hijack these for now
     data.owner = 'Eira Borja';
-    data.postDate = '2019-12-16';
+    data.postDate = new Date();
     api.upload('/bean/create/post', data, p => {
       if (p.success) {
         this.setState({ visible: true });
@@ -198,7 +198,7 @@ export default class Post extends React.Component {
               }
             }}
           >
-            Hey there! I'm a Snackbar.
+            Your post has been submitted.
           </Snackbar>
         </View>
       </ScrollView>

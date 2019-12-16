@@ -76,16 +76,14 @@ export default class Feed extends React.Component {
     });
 
     // fetch feeds
-    if (this.state.articles.length == 0) {
-      api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
-        if (p.success) {
-          console.log('searchPost query');
-          // store.dispatch(saveFeeds(p.result));
-          this.setState({ articles: p.result });
-          // this.setState({ articles: [{ title: 'ito na po', owner: 'ako' }] });
-        }
-      });
-    }
+    api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
+      if (p.success) {
+        console.log('searchPost query');
+        // store.dispatch(saveFeeds(p.result));
+        this.setState({ articles: p.result });
+        // this.setState({ articles: [{ title: 'ito na po', owner: 'ako' }] });
+      }
+    });
 
     const shouldRender = articles.length > 0;
 
