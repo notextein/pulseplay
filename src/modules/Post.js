@@ -18,6 +18,8 @@ import PostSelection from '../components/PostSelection';
 import store from '../ducks/store';
 import cat from '../media/catriona.jpg';
 
+import api from '../api';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -60,6 +62,11 @@ export default class Post extends React.Component {
     };
   }
 
+  savePost = () => {
+    let data = { ...this.state };
+    // api.upload('/bean/create/post', data, p => {});
+  };
+
   showImagePicker = () => {
     // Open Image Library:
     ImagePicker.launchImageLibrary(options, response => {
@@ -79,6 +86,57 @@ export default class Post extends React.Component {
         this.setState({
           imageSource: source
         });
+
+        const data = new FormData();
+        const myData = {
+          title: 'Test post title 1!!!',
+          content: 'Test content here 1!!!',
+          owner: 'Eira Borja',
+          postDate: '2019-12-16'
+        };
+        data.append('data', JSON.stringify(myData));
+        // data.append('media_file', {
+        //   uri: response.uri,
+        //   type: response.type,
+        //   name: response.fileName
+        // });
+        const config = {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'multipart/form-data'
+          },
+          body: data
+        };
+
+        // "id": "",
+        // "mediaType": "",
+        // "media": "",
+        // "thumbnail": "",
+        // "preview": "",
+        // "caption": "",
+        // "title": "",
+        // "content": "",
+        // "source": "",
+        // "link": "",
+        // "owner": "",
+        // "postDate": "",
+        // "updateDate": "",
+        // "approved": false,
+        // "approvedBy": "",
+        // "approvedDate": "",
+        // "tags": "",
+        // "likes": "",
+        // "views": ""
+
+        fetch('http://64.225.6.174:10001/bean/create/post', config)
+          .then(checkStatusAndGetJSONResponse => {
+            console.table('here please!');
+            console.log(checkStatusAndGetJSONResponse);
+          })
+          .catch(err => {
+            console.log(err);
+          });
       }
     });
   };
@@ -87,7 +145,6 @@ export default class Post extends React.Component {
     const { title, content, url } = this.state;
     const { navigation } = this.props;
 
-    console.log(this.state);
     // if (!this.state.imageSource) this.showImagePicker();
     return (
       <ScrollView>

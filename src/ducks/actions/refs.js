@@ -5,3 +5,11 @@ export function addTag(tag) {
     tag
   };
 }
+
+export const FETCH_TAGS = 'FETCH_TAGS';
+export function fetchTags(tag) {
+  return {
+    type: FETCH_TAGS,
+    tag
+  };
+}

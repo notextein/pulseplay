@@ -1,4 +1,4 @@
-import { ADD_TAG } from '../actions/refs';
+import { ADD_TAG, FETCH_TAGS } from '../actions/refs';
 
 let initialState = {
   tags: [
@@ -36,6 +36,11 @@ export default function refs(state = initialState, action) {
       return {
         ...state
       };
+    case FETCH_TAGS:
+      return {
+        ...state
+      };
+
     default:
       return state;
   }

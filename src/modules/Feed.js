@@ -35,12 +35,15 @@ export default class Feed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ''
+      query: '',
+      filtered: []
       // ...this.props // to overwrite base prop
     };
   }
 
   updateQuery = query => {
+    let local = [];
+
     // store.dispatch(saveSearchQuery(query));
   };
   render() {
@@ -62,10 +65,16 @@ export default class Feed extends React.Component {
             <Searchbar
               placeholder='Search for the latest Pulse...'
               onChangeText={text => {
-                this.setState({ query: text });
+                this.setState({ query: text.toLowerCase() });
               }}
               value={query}
             />
+
+            {/* {
+              query && (
+                
+              )
+            } */}
             <View
               style={{
                 flex: 1,
