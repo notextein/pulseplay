@@ -7,6 +7,7 @@ const articles = [
     img: kol[5].img,
     author: kol[5].fullname,
     datePublished: '6:25AM, Sept. 12, 2019',
+    tags: ['lifestyle', 'healthy', 'healthyliving'],
     content: `On 19 September 2019, an outbreak of polio was declared in the Philippines. Children in the Philippines are at risk of lifelong paralysis because of this outbreak.
 
     The Philippine Department of Health and partners are working together on a comprehensive outbreak response, including mass polio immunization rounds from October 2019. All children, regardless of whether they are covered by the mass immunization campaign or not, should be vaccinated according to the routine immunization schedule. 
@@ -22,6 +23,15 @@ const articles = [
     img: kol[0].img,
     author: kol[0].fullname,
     datePublished: '7:29AM, Dec. 12, 2019',
+    tags: [
+      'weightloss',
+      'lifestyle',
+      'healthy',
+      'healthyliving',
+      'yoga',
+      'diet',
+      'eatclean'
+    ],
     content: `If you follow my Instagram stories, you’ll know that I just recently went through a 10-day detox/juice cleanse. Over the past years, there have been plenty of different views on the practice of juicing after the trend has exploded in 2011-2012.
 
     Just to make it clear, juicing is not primarily for weight loss. It isn’t a crash diet. The weight you lose in the duration of the cleanse is merely water weight and you’ll most likely gain it back after. What it is though, is a natural means of healing, allowing your body to focus its energy on flushing toxins out on its own with the support of nutrients of, you know it– cold-pressed juice. Is it a diet? It’s not. You can’t live off of cold-pressed juice for a long period of time because of the absence of fiber, protein and fat to name a few. However, juices are rich in a ton of micronutrients and are so potent that your body will actually thrive in them during your cleanse.
@@ -35,6 +45,7 @@ const articles = [
     img: kol[6].img,
     author: kol[6].fullname,
     datePublished: 'Nov. 30, 2019',
+    tags: ['advocacy'],
     content: `The Department of Health (DOH) today underscored the critical role of communities in raising awareness and encouraging care and support for People Living with HIV (PLHIV), as it observed the World AIDS Day 2019 with the theme “Communities do make the Difference.”
 
     The 2018 UNAIDS Global Report cited the Philippines as having the highest percentage increase (203%) of estimated new HIV infections in Asia and the Pacific. “The number of diagnosed HIV cases has also been increasing from one per day in 2008 to 35 per day as of July 2019,” Health Secretary Francisco T. Duque III said.
@@ -54,6 +65,7 @@ const articles = [
     img: kol[1].img,
     author: kol[1].fullname,
     datePublished: '12:45PM, Dec. 11, 2019',
+    tags: ['beauty', 'selfcare'],
     content: `Gretchen Ho wakes up at 3 am almost every single day to prepare for her morning show. Despite the early mornings, you’ll never catch her looking tired, stressed, or exhausted from the day before. Her secret? Enough sleep, a kick-ass fitness routine, and lots of self-love.
 
     Despite what our Instagram feeds lead us to believe, no one actually wakes up feeling like a 10 in the morning. We all have those days when insecurity creeps in, making it difficult to feel confident in our skin.`
@@ -64,6 +76,14 @@ const articles = [
     img: kol[2].img,
     author: kol[2].fullname,
     datePublished: '2:45PM, Dec. 10, 2019',
+    tags: [
+      'weightloss',
+      'lifestyle',
+      'healthy',
+      'healthyliving',
+      'diet',
+      'eatclean'
+    ],
     content: `It’s easy to get confused when it comes to health and nutrition. Even qualified experts often seem to hold opposing opinions. Yet, despite all the disagreements, a number of wellness tips are well supported by research. Here are 27 health and nutrition tips that are actually based on good science.`
   },
   {
@@ -73,6 +93,7 @@ const articles = [
     img: kol[3].img,
     author: kol[3].fullname,
     datePublished: '8:10AM, Dec. 09, 2019',
+    tags: ['advocacy'],
     content: `Thanks to Twittersphere, the dialogue on mental health is getting out of the offices of teachers, lawyers, and doctors and spreading over virtual streets. Now the professionals turn to the internet to raise the awareness. Among them is Dr. Gia Sison, a Filipino mental health advocate and a kind of hero who turns her personal pain into a greater lesson for us all.
 
     Dr. Sison is a full-time physician, blogger, a social media influencer, speaker and leader and advocate of healthcare organizations. Aside from the professional titles, she is also a wife, mother and brave and proud breast cancer survivor.`
@@ -82,6 +103,14 @@ const articles = [
     authorId: 4,
     img: kol[4].img,
     author: kol[4].fullname,
+    tags: [
+      'weightloss',
+      'lifestyle',
+      'healthy',
+      'healthyliving',
+      'diet',
+      'eatclean'
+    ],
     datePublished: '9:45AM, Dec. 08, 2019',
     content: `Meal planning can seem like it takes a lot of work at first, but you’ll be saving yourself lots of time if you think about it. This meal plan is prepped, cooked, and arranged in just 90 minutes. Compare that to an hour it takes each day to make one meal!`
   }

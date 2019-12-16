@@ -23,7 +23,9 @@ let initialState = {
     'outdoor',
     'healthadvocate',
     'advocacy',
-    'studies'
+    'studies',
+    'beauty',
+    'selfcare'
   ]
 };
 
