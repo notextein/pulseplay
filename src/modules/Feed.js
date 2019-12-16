@@ -30,6 +30,9 @@ import currentUser from '../data/user'; // from remote
 import store from '../ducks/store';
 import { setUser } from '../ducks/actions/user';
 import { saveAuth, saveSearchQuery } from '../ducks/actions/auth';
+import { fetchTags } from '../ducks/actions/refs';
+
+import api from '../api';
 
 export default class Feed extends React.Component {
   constructor(props) {
@@ -48,11 +51,24 @@ export default class Feed extends React.Component {
   };
   render() {
     const unsubscribe = store.subscribe(() => console.log(store.getState()));
-    store.dispatch(saveAuth(currentUser));
-    store.dispatch(setUser(currentUser));
+    if (!store.getState().user.id) {
+      store.dispatch(saveAuth(currentUser));
+      store.dispatch(setUser(currentUser));
+    }
 
     const { query } = this.state;
     const { navigation } = this.props;
+
+    api.get('/bean/query/getTags', p => {
+      if (p.success) {
+        let tagsArr = [];
+        let serverTags = p.result;
+        serverTags.map(el => {
+          tagsArr.push(el.code);
+        });
+        store.dispatch(fetchTags(tagsArr));
+      }
+    });
 
     return (
       <>

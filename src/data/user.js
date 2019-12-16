@@ -1,5 +1,6 @@
 import Eira from '../media/eira.png';
 const user = {
+  id: 0,
   fullname: 'Eira Borja',
   firstname: 'Eira',
   lastname: 'Borja',

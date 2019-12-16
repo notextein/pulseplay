@@ -37,8 +37,10 @@ export default function refs(state = initialState, action) {
         ...state
       };
     case FETCH_TAGS:
+      const newTags = [...action.tags];
       return {
-        ...state
+        ...state,
+        tags: newTags
       };
 
     default:

@@ -7,9 +7,9 @@ export function addTag(tag) {
 }
 
 export const FETCH_TAGS = 'FETCH_TAGS';
-export function fetchTags(tag) {
+export function fetchTags(tags) {
   return {
     type: FETCH_TAGS,
-    tag
+    tags
   };
 }

@@ -8,7 +8,7 @@ import {
   TextInput,
   StyleSheet
 } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Button, Snackbar } from 'react-native-paper';
 import ImagePicker from 'react-native-image-picker';
 
 import MiniProfileHeader from '../components/MiniProfileHeader';
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   default: {
     marginVertical: 5,
     height: 40,
+    color: 'black',
     borderColor: 'gray',
     borderWidth: 1
   },
@@ -54,17 +55,38 @@ export default class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      content: '',
-      url: '',
+      visible: false,
+      title: 'Post title...',
+      content: 'Post content...',
+      url: 'Post url (optional)...',
       imageSource: null,
       ...this.props // to overwrite base state
     };
   }
 
-  savePost = () => {
+  savePost = nav => {
     let data = { ...this.state };
-    // api.upload('/bean/create/post', data, p => {});
+    // this.setState({ visible: true });
+    // hijack these for now
+    data.owner = 'Eira Borja';
+    data.postDate = '2019-12-16';
+    api.upload('/bean/create/post', data, p => {
+      if (p.success) {
+        this.setState({ visible: true });
+        setTimeout(() => {
+          this.setState({
+            visible: true,
+            title: 'Post title...',
+            content: 'Post content...',
+            url: 'Post url (optional)...',
+            imageSource: null,
+            ...this.props
+          });
+          nav.navigate('Home');
+        }, 5000);
+      } else {
+      }
+    });
   };
 
   showImagePicker = () => {
@@ -82,69 +104,16 @@ export default class Post extends React.Component {
         // const source = { uri: response.uri };
         // You can also display the image using data:
         const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
         this.setState({
           imageSource: source
         });
-
-        const data = new FormData();
-        const myData = {
-          title: 'Test post title 1!!!',
-          content: 'Test content here 1!!!',
-          owner: 'Eira Borja',
-          postDate: '2019-12-16'
-        };
-        data.append('data', JSON.stringify(myData));
-        // data.append('media_file', {
-        //   uri: response.uri,
-        //   type: response.type,
-        //   name: response.fileName
-        // });
-        const config = {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'multipart/form-data'
-          },
-          body: data
-        };
-
-        // "id": "",
-        // "mediaType": "",
-        // "media": "",
-        // "thumbnail": "",
-        // "preview": "",
-        // "caption": "",
-        // "title": "",
-        // "content": "",
-        // "source": "",
-        // "link": "",
-        // "owner": "",
-        // "postDate": "",
-        // "updateDate": "",
-        // "approved": false,
-        // "approvedBy": "",
-        // "approvedDate": "",
-        // "tags": "",
-        // "likes": "",
-        // "views": ""
-
-        fetch('http://64.225.6.174:10001/bean/create/post', config)
-          .then(checkStatusAndGetJSONResponse => {
-            console.table('here please!');
-            console.log(checkStatusAndGetJSONResponse);
-          })
-          .catch(err => {
-            console.log(err);
-          });
       }
     });
   };
 
   render() {
-    const { title, content, url } = this.state;
+    const { title, content, url, visible } = this.state;
     const { navigation } = this.props;
-
     // if (!this.state.imageSource) this.showImagePicker();
     return (
       <ScrollView>
@@ -203,7 +172,7 @@ export default class Post extends React.Component {
             mode='contained'
             color='#e8e4c9'
             width={120}
-            onPress={() => navigation.goBack()}
+            onPress={() => navigation.navigate('Home')}
           >
             Cancel
           </Button>
@@ -214,10 +183,23 @@ export default class Post extends React.Component {
             color='#68737a'
             width={120}
             // color='#ed1b2c'
-            onPress={() => navigation.goBack()}
+            onPress={() => this.savePost(navigation)}
           >
             Save
           </Button>
+          <Snackbar
+            style={{ color: '#68737a' }}
+            visible={visible}
+            onDismiss={() => this.setState({ visible: false })}
+            action={{
+              label: 'Close',
+              onPress: () => {
+                this.setState({ visible: false });
+              }
+            }}
+          >
+            Hey there! I'm a Snackbar.
+          </Snackbar>
         </View>
       </ScrollView>
     );
