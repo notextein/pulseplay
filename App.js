@@ -15,17 +15,25 @@ import KolProfileScreen from './src/modules/KolProfile';
 import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
 import PostScreen from './src/modules/Post';
+import LoginScreen from './src/modules/Login';
 
 // components
 import HomeIconWithBadge from './src/components/HomeIconWithBadge';
 
 const FeedStack = createStackNavigator({
+  Login: {
+    screen: LoginScreen,
+    navigationOptions: {
+      headerTitle: 'Login'
+    }
+  },
   Feed: {
     screen: FeedScreen,
     navigationOptions: {
       headerTitle: 'Pulse Feed'
     }
   },
+
   Content: {
     screen: ContentScreen,
     navigationOptions: {

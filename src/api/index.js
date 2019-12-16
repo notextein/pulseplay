@@ -1,7 +1,8 @@
 // // let fs = require('fs');
 // let request = require('request');
 
-const HOST = 'http://64.225.6.174:10001';
+// const HOST = 'http://64.225.6.174:10001'; // live
+const HOST = 'http://64.225.6.174:10002'; // test
 
 const api = {
   get: (bean, callback) => {
