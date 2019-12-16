@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { Searchbar } from 'react-native-paper';
-
 import {
   TouchableOpacity,
   SafeAreaView,
@@ -26,14 +26,31 @@ import Health from '../media/health-check.png';
 import kol from '../data/kol';
 import articles from '../data/articles';
 
-export default class Feed extends React.Component {
-  state = {
-    firstQuery: ''
-  };
+import currentUser from '../data/user'; // from remote
+import store from '../ducks/store';
+import { setUser } from '../ducks/actions/user';
+import { saveAuth, saveSearchQuery } from '../ducks/actions/auth';
 
+export default class Feed extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: ''
+      // ...this.props // to overwrite base prop
+    };
+  }
+
+  updateQuery = query => {
+    // store.dispatch(saveSearchQuery(query));
+  };
   render() {
-    const { firstQuery } = this.state;
+    const unsubscribe = store.subscribe(() => console.log(store.getState()));
+    store.dispatch(saveAuth(currentUser));
+    store.dispatch(setUser(currentUser));
+
+    const { query } = this.state;
     const { navigation } = this.props;
+
     return (
       <>
         <StatusBar barStyle='dark-content' />
@@ -44,10 +61,10 @@ export default class Feed extends React.Component {
           >
             <Searchbar
               placeholder='Search for the latest Pulse...'
-              onChangeText={query => {
-                this.setState({ firstQuery: query });
+              onChangeText={text => {
+                // this.updateQuery(text);
               }}
-              value={firstQuery}
+              value={query}
             />
             <View
               style={{
@@ -111,3 +128,14 @@ export default class Feed extends React.Component {
     );
   }
 }
+
+// const mapStateToProps = (state /*, ownProps*/) => {
+//   return {
+//     user: state.auth,
+//     tags: state.refs.tags,
+//     preference: state.user.preference,
+//     query: state.user.searchQuery
+//   };
+// };
+
+// export default connect(mapStateToProps)(Feed);

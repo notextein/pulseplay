@@ -1,8 +1,14 @@
-import { SET_USER, ADD_PREFERENCE, REMOVE_PREFERENCE } from '../actions/user';
+import {
+  SET_USER,
+  ADD_PREFERENCE,
+  REMOVE_PREFERENCE,
+  SAVE_SEARCH_QUERY
+} from '../actions/user';
 
 let initialState = {
   // ...user
-  preference: []
+  preference: [],
+  searchQuery: ''
 };
 
 export default function user(state = initialState, action) {
@@ -24,6 +30,12 @@ export default function user(state = initialState, action) {
       return {
         ...state
       };
+    case SAVE_SEARCH_QUERY:
+      return {
+        ...state,
+        searchQuery: action.query
+      };
+
     default:
       return state;
   }
