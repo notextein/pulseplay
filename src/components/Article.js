@@ -77,7 +77,11 @@ export default class Article extends React.Component {
 
     let tagsArr = [];
     if (tags) {
-      tagsArr = tags.split(' ');
+      let tempArr = [];
+      tempArr = tags.split(' ');
+      for (let i = 0; i < 3 && i < tempArr.length; i++) {
+        tagsArr[i] = tempArr[i];
+      }
     }
 
     let authorDisplay = author ? author : 'Pulse Author';

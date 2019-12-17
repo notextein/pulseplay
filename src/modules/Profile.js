@@ -23,6 +23,11 @@ class Profile extends React.Component {
         <UserProfileItem name='Language' />
         <UserProfileItem name='Provide Feedback' />
         <UserProfileItem name='Legal and Privacy' />
+        <UserProfileItem
+          name='Logout'
+          navigation={navigation}
+          isLogout={true}
+        />
       </ScrollView>
     );
   }

@@ -3,16 +3,21 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
 import HorizontalRule from '../components/HorizontalRule';
+import storage from '../storage';
 
 export default class UserProfileItem extends React.Component {
   handlePress = details => {
     // handle others here as well
-    if (details.navigation) {
+    if (details.isLogout && details.navigation) {
+      storage.removeKey('@auth');
+      details.navigation.navigate('Login');
+    } else if (details.navigation) {
       details.navigation.navigate('Preference', { ...details });
     }
   };
+
   render() {
-    const { name, red } = this.props;
+    const { name, red, isLogout } = this.props;
     const styles = {};
 
     if (red) {

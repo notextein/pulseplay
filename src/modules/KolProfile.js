@@ -28,9 +28,9 @@ export default class KolProfile extends React.Component {
         <ProfileHeader {...this.props.navigation.state.params} />
         <View style={{ marginLeft: 20 }}>
           <Text style={{ marginVertical: 20 }}>{displayName}'s posts...</Text>
-          {posts.map((el, idx) => (
+          {/* {posts.map((el, idx) => (
             <Article key={idx} navigation={this.props.navigation} {...el} />
-          ))}
+          ))} */}
         </View>
       </ScrollView>
     );
