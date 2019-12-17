@@ -21,12 +21,12 @@ import LoginScreen from './src/modules/Login';
 import HomeIconWithBadge from './src/components/HomeIconWithBadge';
 
 const FeedStack = createStackNavigator({
-  Login: {
-    screen: LoginScreen,
-    navigationOptions: {
-      headerTitle: 'Login'
-    }
-  },
+  // Login: {
+  //   screen: LoginScreen,
+  //   navigationOptions: {
+  //     headerTitle: 'Login'
+  //   }
+  // },
   Feed: {
     screen: FeedScreen,
     navigationOptions: {

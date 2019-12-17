@@ -43,6 +43,7 @@ const api = {
       });
   },
   upload: (bean, data, fileSrc, callback) => {
+    console.log('trying to upload');
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
     formdata.append('token', store.getState().auth.token);

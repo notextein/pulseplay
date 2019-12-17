@@ -56,6 +56,7 @@ export default class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      photo: null,
       visible: false,
       title: 'Post title...',
       content: 'Post content...',
@@ -74,11 +75,11 @@ export default class Post extends React.Component {
     data.owner = 'Eira Borja';
     data.postDate = new Date();
     const fileSrc = {
-      // value: fs.createReadStream(this.state.imageSource)
+      ...this.state.photo
     };
 
-    console.log('whelp', this.state.imageSource);
     api.upload('/bean/create/post', data, fileSrc, p => {
+      console.log('upload response!!!', p);
       if (p.success) {
         this.setState({ visible: true });
         setTimeout(() => {
@@ -91,7 +92,7 @@ export default class Post extends React.Component {
             ...this.props
           });
           nav.navigate('Home');
-        }, 5000);
+        }, 2000);
       } else {
       }
     });
@@ -114,16 +115,17 @@ export default class Post extends React.Component {
         // const source = { uri: 'data:image/jpeg;base64,' + response.data };
         const source = { uri: response.uri };
         this.setState({
-          imageSource: source
+          imageSource: source,
+          photo: response
         });
       }
     });
   };
 
   render() {
-    const { title, content, url, visible, tags } = this.state;
+    const { photo, title, content, url, visible, tags } = this.state;
     const { navigation } = this.props;
-    // if (!this.state.imageSource) this.showImagePicker();
+    console.log('photo', photo);
     return (
       <ScrollView>
         <View style={styles.container}>
@@ -174,6 +176,13 @@ export default class Post extends React.Component {
             onChangeText={text => this.setState({ url: text })}
             value={url}
           /> */}
+          {photo && (
+            <Image
+              source={{ uri: photo.uri }}
+              style={{ width: 100, height: 100 }}
+              resizeMode='contain'
+            />
+          )}
           <PostSelection
             onPress={this.showImagePicker}
             icon={'photo'}
