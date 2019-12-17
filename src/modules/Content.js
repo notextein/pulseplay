@@ -5,7 +5,8 @@ import {
   View,
   Image,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Linking
 } from 'react-native';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -45,10 +46,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     flexWrap: 'wrap'
+  },
+  link: {
+    fontSize: 14,
+    color: 'blue'
   }
 });
 
 export default class Content extends React.Component {
+  openLink = url => {
+    Linking.openURL(url).catch(err => console.error('An error occurred', err));
+  };
   render() {
     const {
       id,
@@ -86,7 +94,13 @@ export default class Content extends React.Component {
     const linkCmp = link ? (
       <View>
         <Text style={styles.related}>Related link:</Text>
-        <Text style={styles.content}>{link}</Text>
+        <TouchableOpacity
+          onPress={() => this.openLink(link)}
+          underlayColor='gray'
+          activeOpacity={0.1}
+        >
+          <Text style={styles.link}>{link}</Text>
+        </TouchableOpacity>
       </View>
     ) : (
       <View />
