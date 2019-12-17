@@ -43,25 +43,40 @@ export default class Feed extends React.Component {
       query: '',
       filtered: [],
       articles: [],
+      cachedArticles: [],
       ...this.props // to overwrite base prop
     };
   }
-
+  fetchTimer = null;
   updateQuery = query => {
-    let local = [];
+    clearTimeout(this.fetchTimer);
+    const myArticles = [...this.state.articles];
+    this.setState({ cachedArticles: myArticles, articles: [] }); // cache old results, empty current one
+    this.fetchTimer = setTimeout(() => {
+      console.log('timer done');
+      api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
+        if (p.success) {
+          console.log('response done');
+          this.setState({ articles: p.result });
+        }
+      });
+    }, 2000);
+    this.setState({
+      query: query
+    });
 
     // store.dispatch(saveSearchQuery(query));
   };
 
   render() {
+    const { query, articles } = this.state;
+    const { navigation } = this.props;
+
     // const unsubscribe = store.subscribe(() => console.log(store.getState()));
     if (!store.getState().user.id) {
       store.dispatch(saveAuth(currentUser));
       store.dispatch(setUser(currentUser));
     }
-
-    const { query, articles } = this.state;
-    const { navigation } = this.props;
 
     // fetch tags
     api.get('/bean/query/getTags', p => {
@@ -75,14 +90,21 @@ export default class Feed extends React.Component {
       }
     });
 
-    // fetch feeds
-    api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
-      if (p.success) {
-        this.setState({ articles: p.result });
-      }
-    });
-
+    const isSearching = query ? true : false;
     const shouldRender = articles.length > 0;
+
+    // fetch feeds
+    if (!isSearching) {
+      // to load once
+      api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
+        if (p.success) {
+          this.setState({ articles: p.result });
+        }
+      });
+    }
+
+    console.log('query', query);
+    console.log('isSearching', isSearching);
 
     return (
       <>
@@ -95,59 +117,68 @@ export default class Feed extends React.Component {
             <Searchbar
               placeholder='Search for the latest Pulse...'
               onChangeText={text => {
-                this.setState({ query: text.toLowerCase() });
+                this.updateQuery(text.toLowerCase());
               }}
               value={query}
             />
-            <View
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <TouchableOpacity
-                onPress={() => console.log('pressed')}
-                underlayColor='gray'
-                activeOpacity={0.1}
+            {!isSearching && (
+              <View
+                style={{
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
               >
-                {/* <Image style={{ width: 420, height: 150 }} source={Banner} /> */}
-                <Image
-                  style={{ width: 420, height: 150, resizeMode: 'contain' }}
-                  source={Health}
-                />
-              </TouchableOpacity>
-            </View>
+                <TouchableOpacity
+                  onPress={() => console.log('pressed')}
+                  underlayColor='gray'
+                  activeOpacity={0.1}
+                >
+                  {/* <Image style={{ width: 420, height: 150 }} source={Banner} /> */}
+                  <Image
+                    style={{ width: 420, height: 150, resizeMode: 'contain' }}
+                    source={Health}
+                  />
+                </TouchableOpacity>
+              </View>
+            )}
 
             <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Recommended for you:</Text>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: 'row'
-                  }}
-                >
-                  <Kol {...kol[4]} navigation={navigation} />
-                  <Kol {...kol[1]} navigation={navigation} />
-                  <Kol {...kol[8]} navigation={navigation} />
-                </View>
-              </View>
-              <HorizontalRule />
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Trending right now:</Text>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: 'row'
-                  }}
-                >
-                  <Kol {...kol[9]} navigation={navigation} />
-                  <Kol {...kol[10]} navigation={navigation} />
-                  <Kol {...kol[7]} navigation={navigation} />
-                </View>
-              </View>
-              <HorizontalRule />
+              {!isSearching && (
+                <>
+                  <View style={styles.sectionContainer}>
+                    <Text style={styles.sectionTitle}>
+                      Recommended for you:
+                    </Text>
+                    <View
+                      style={{
+                        flex: 1,
+                        flexDirection: 'row'
+                      }}
+                    >
+                      <Kol {...kol[1]} navigation={navigation} />
+                      <Kol {...kol[3]} navigation={navigation} />
+                      <Kol {...kol[11]} navigation={navigation} />
+                    </View>
+                  </View>
+                  <HorizontalRule />
+                  <View style={styles.sectionContainer}>
+                    <Text style={styles.sectionTitle}>Trending right now:</Text>
+                    <View
+                      style={{
+                        flex: 1,
+                        flexDirection: 'row'
+                      }}
+                    >
+                      <Kol {...kol[12]} navigation={navigation} />
+                      <Kol {...kol[5]} navigation={navigation} />
+                      <Kol {...kol[13]} navigation={navigation} />
+                    </View>
+                  </View>
+                  <HorizontalRule />
+                </>
+              )}
+
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Your latest Pulse:</Text>
                 {shouldRender &&
