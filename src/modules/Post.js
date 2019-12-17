@@ -60,6 +60,7 @@ export default class Post extends React.Component {
       title: 'Post title...',
       content: 'Post content...',
       url: 'Post url (optional)...',
+      tags: 'tags...',
       imageSource: null,
       ...this.props // to overwrite base state
     };
@@ -67,6 +68,7 @@ export default class Post extends React.Component {
 
   savePost = nav => {
     let data = { ...this.state };
+    data.caption = data.content;
     // this.setState({ visible: true });
     // hijack these for now
     data.owner = 'Eira Borja';
@@ -76,23 +78,23 @@ export default class Post extends React.Component {
     };
 
     console.log('whelp', this.state.imageSource);
-    // api.upload('/bean/create/post', data, fileSrc, p => {
-    //   if (p.success) {
-    //     this.setState({ visible: true });
-    //     setTimeout(() => {
-    //       this.setState({
-    //         visible: true,
-    //         title: 'Post title...',
-    //         content: 'Post content...',
-    //         url: 'Post url (optional)...',
-    //         imageSource: null,
-    //         ...this.props
-    //       });
-    //       nav.navigate('Home');
-    //     }, 5000);
-    //   } else {
-    //   }
-    // });
+    api.upload('/bean/create/post', data, fileSrc, p => {
+      if (p.success) {
+        this.setState({ visible: true });
+        setTimeout(() => {
+          this.setState({
+            visible: true,
+            title: 'Post title...',
+            content: 'Post content...',
+            url: 'Post url (optional)...',
+            imageSource: null,
+            ...this.props
+          });
+          nav.navigate('Home');
+        }, 5000);
+      } else {
+      }
+    });
   };
 
   showImagePicker = () => {
@@ -119,7 +121,7 @@ export default class Post extends React.Component {
   };
 
   render() {
-    const { title, content, url, visible } = this.state;
+    const { title, content, url, visible, tags } = this.state;
     const { navigation } = this.props;
     // if (!this.state.imageSource) this.showImagePicker();
     return (
@@ -145,6 +147,12 @@ export default class Post extends React.Component {
             numberOfLines={4}
             onChangeText={text => this.setState({ content: text })}
             value={content}
+          />
+          <TextInput
+            placeholder='Your tags...'
+            style={styles.default}
+            onChangeText={text => this.setState({ tags: text.toLowerCase() })}
+            value={tags}
           />
           {/* <View style={{ alignItems: 'flex-start' }}>
             <Image

@@ -60,6 +60,7 @@ export default class Content extends React.Component {
       media,
       preview,
       tags,
+      link,
       navigation
     } = this.props.navigation.state.params;
 
@@ -69,6 +70,27 @@ export default class Content extends React.Component {
     if (tags) {
       tagsArr = tags.split(' ');
     }
+
+    const imageCmp = preview ? (
+      <Image
+        style={{ width: 240, height: 120 }}
+        resizeMode='center'
+        source={{
+          uri: host + '/bean/media/' + preview
+        }}
+      />
+    ) : (
+      <View />
+    );
+
+    const linkCmp = link ? (
+      <View>
+        <Text style={styles.related}>Related link:</Text>
+        <Text style={styles.content}>{link}</Text>
+      </View>
+    ) : (
+      <View />
+    );
 
     return (
       <ScrollView>
@@ -98,18 +120,9 @@ export default class Content extends React.Component {
           <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
           ></View>
-          {preview && (
-            <Image
-              style={{ width: 240, height: 120 }}
-              resizeMode='center'
-              source={{
-                uri: host + '/bean/media/' + preview
-              }}
-            />
-          )}
-
+          {imageCmp}
           <Text style={styles.content}>{content}</Text>
-          <Text style={styles.related}>Related articles here...</Text>
+          {linkCmp}
         </View>
       </ScrollView>
     );

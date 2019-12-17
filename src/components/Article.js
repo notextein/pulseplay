@@ -80,6 +80,20 @@ export default class Article extends React.Component {
       tagsArr = tags.split(' ');
     }
 
+    let authorDisplay = author ? author : 'Pulse Author';
+
+    const avatarCmp = thumbnail ? (
+      <Avatar.Image
+        style={styles.articleSnippetAvatar}
+        size={40}
+        source={{
+          uri: host + '/bean/media/' + thumbnail
+        }}
+      />
+    ) : (
+      <View />
+    );
+
     return (
       <TouchableOpacity
         onPress={() => this.handlePress({ ...this.props })}
@@ -89,7 +103,7 @@ export default class Article extends React.Component {
         <View style={styles.articleSnippet}>
           <Text style={styles.articleSnippetTitle}>{title}</Text>
           <Text style={styles.articleSnippetAuthor}>
-            By test author on {postDate}
+            By {authorDisplay} on {postDate}
           </Text>
           <View
             style={{
@@ -112,13 +126,7 @@ export default class Article extends React.Component {
           <View style={styles.articleSnippetReadMore}>
             <Text>Continue reading...</Text>
           </View>
-          <Avatar.Image
-            style={styles.articleSnippetAvatar}
-            size={40}
-            source={{
-              uri: host + '/bean/media/' + thumbnail
-            }}
-          />
+          {avatarCmp}
         </View>
       </TouchableOpacity>
     );

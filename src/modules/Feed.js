@@ -78,10 +78,7 @@ export default class Feed extends React.Component {
     // fetch feeds
     api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
       if (p.success) {
-        console.log('searchPost query');
-        // store.dispatch(saveFeeds(p.result));
         this.setState({ articles: p.result });
-        // this.setState({ articles: [{ title: 'ito na po', owner: 'ako' }] });
       }
     });
 
@@ -102,12 +99,6 @@ export default class Feed extends React.Component {
               }}
               value={query}
             />
-
-            {/* {
-              query && (
-                
-              )
-            } */}
             <View
               style={{
                 flex: 1,
