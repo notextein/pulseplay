@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     padding: 10,
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-end'
   }
 });
 
@@ -73,19 +73,26 @@ export default class Content extends React.Component {
 
   shareHandler(social) {
     const options = {
-      title: 'Share via Facebook',
+      title: 'Share content via',
       message: 'No one knows you like your Pulse',
       url: 'https://wedopulse.com/ph/',
       social: social
     };
 
-    Share.shareSingle(options)
+    Share.open(options)
       .then(res => {
         console.log(res);
       })
       .catch(err => {
         err && console.log(err);
       });
+    // Share.shareSingle(options)
+    //   .then(res => {
+    //     console.log(res);
+    //   })
+    //   .catch(err => {
+    //     err && console.log(err);
+    //   });
   }
   render() {
     const {
@@ -162,7 +169,7 @@ export default class Content extends React.Component {
               <Icon
                 name='bookmark'
                 color={globalStyles.accent.color}
-                size={25}
+                size={30}
               />
             </TouchableOpacity>
             <TouchableOpacity
@@ -171,7 +178,7 @@ export default class Content extends React.Component {
               activeOpacity={0.1}
               onPress={() => this.shareHandler(Share.Social.FACEBOOK)}
             >
-              <Icon name='facebook-square' color='#3b5998' size={25} />
+              <Icon name='share-square-o' color='#3b5998' size={30} />
             </TouchableOpacity>
             {/* <TouchableOpacity
               style={{ margin: 3 }}
