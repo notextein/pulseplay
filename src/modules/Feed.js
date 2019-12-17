@@ -18,6 +18,7 @@ import styles from '../styles';
 import Kol from '../components/Kol';
 import Article from '../components/Article';
 import HorizontalRule from '../components/HorizontalRule';
+import ActIndicator from '../components/ActIndicator';
 
 // media
 import Banner from '../media/banner.jpg';
@@ -40,6 +41,7 @@ export default class Feed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isSearching: false,
       query: '',
       filtered: [],
       articles: [],
@@ -49,15 +51,18 @@ export default class Feed extends React.Component {
   }
   fetchTimer = null;
   updateQuery = query => {
+    // if (!query) return;
     clearTimeout(this.fetchTimer);
     const myArticles = [...this.state.articles];
-    this.setState({ cachedArticles: myArticles, articles: [] }); // cache old results, empty current one
+    this.setState({
+      isSearching: true,
+      cachedArticles: myArticles,
+      articles: []
+    }); // cache old results, empty current one
     this.fetchTimer = setTimeout(() => {
-      console.log('timer done');
       api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
         if (p.success) {
-          console.log('response done');
-          this.setState({ articles: p.result });
+          this.setState({ isSearching: false, articles: p.result });
         }
       });
     }, 2000);
@@ -69,7 +74,7 @@ export default class Feed extends React.Component {
   };
 
   render() {
-    const { query, articles } = this.state;
+    const { isSearching, query, articles } = this.state;
     const { navigation } = this.props;
 
     // const unsubscribe = store.subscribe(() => console.log(store.getState()));
@@ -89,8 +94,7 @@ export default class Feed extends React.Component {
         store.dispatch(fetchTags(tagsArr));
       }
     });
-
-    const isSearching = query ? true : false;
+    const isQueryEmpty = query ? false : true;
     const shouldRender = articles.length > 0;
 
     // fetch feeds
@@ -121,7 +125,8 @@ export default class Feed extends React.Component {
               }}
               value={query}
             />
-            {!isSearching && (
+
+            {isQueryEmpty && (
               <View
                 style={{
                   flex: 1,
@@ -144,7 +149,7 @@ export default class Feed extends React.Component {
             )}
 
             <View style={styles.body}>
-              {!isSearching && (
+              {isQueryEmpty && (
                 <>
                   <View style={styles.sectionContainer}>
                     <Text style={styles.sectionTitle}>
@@ -181,6 +186,7 @@ export default class Feed extends React.Component {
 
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Your latest Pulse:</Text>
+                <ActIndicator animating={isSearching} />
                 {shouldRender &&
                   articles.map((el, idx) => (
                     <Article key={idx} navigation={navigation} {...el} />

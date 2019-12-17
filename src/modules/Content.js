@@ -10,13 +10,20 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon5 from 'react-native-vector-icons/FontAwesome5';
+
 import ProfileHeader from '../components/ProfileHeader';
 import ChipTag from '../components/ChipTag';
+import ContentIcons from '../components/ContentIcons';
+
+import Share from 'react-native-share';
 
 // data
 import kol from '../data/kol';
 import api from '../api';
 import host from '../api/host';
+
+import globalStyles from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -50,6 +57,12 @@ const styles = StyleSheet.create({
   link: {
     fontSize: 14,
     color: 'blue'
+  },
+  iconContainer: {
+    padding: 10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start'
   }
 });
 
@@ -57,6 +70,23 @@ export default class Content extends React.Component {
   openLink = url => {
     Linking.openURL(url).catch(err => console.error('An error occurred', err));
   };
+
+  shareHandler(social) {
+    const options = {
+      title: 'Share via Facebook',
+      message: 'No one knows you like your Pulse',
+      url: 'https://wedopulse.com/ph/',
+      social: social
+    };
+
+    Share.shareSingle(options)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        err && console.log(err);
+      });
+  }
   render() {
     const {
       id,
@@ -72,8 +102,6 @@ export default class Content extends React.Component {
       navigation
     } = this.props.navigation.state.params;
 
-    console.log('content.props!!!!', this.props.navigation.state.params);
-
     let tagsArr = [];
     if (tags) {
       tagsArr = tags.split(' ');
@@ -81,8 +109,8 @@ export default class Content extends React.Component {
 
     const imageCmp = preview ? (
       <Image
-        style={{ width: 240, height: 120 }}
-        resizeMode='center'
+        style={{ width: 320, height: 160 }}
+        resizeMode='cover'
         source={{
           uri: host + '/bean/media/' + preview
         }}
@@ -106,6 +134,8 @@ export default class Content extends React.Component {
       <View />
     );
 
+    const displayAuthor = author ? author : 'Pulse Author';
+
     return (
       <ScrollView>
         {/* <ProfileHeader
@@ -115,22 +145,44 @@ export default class Content extends React.Component {
         */}
         <View style={styles.container}>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.subtitle}>By test author on {postDate}</Text>
+          <Text style={styles.subtitle}>
+            By {displayAuthor} on {postDate}
+          </Text>
           <View style={styles.tags}>
             {tagsArr.map((el, idx) => (
               <ChipTag key={'art-tag-' + idx} tag={el} />
             ))}
           </View>
-          <View style={{ marginTop: 20, alignItems: 'flex-start' }}>
-            <Button
-              icon='bookmark'
-              mode='contained'
-              color='#68737a'
-              onPress={() => console.log('Pressed')}
+          <View style={styles.iconContainer}>
+            <TouchableOpacity
+              style={{ margin: 3 }}
+              underlayColor='gray'
+              activeOpacity={0.1}
             >
-              Bookmark
-            </Button>
+              <Icon
+                name='bookmark'
+                color={globalStyles.accent.color}
+                size={25}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{ margin: 3 }}
+              underlayColor='gray'
+              activeOpacity={0.1}
+              onPress={() => this.shareHandler(Share.Social.FACEBOOK)}
+            >
+              <Icon name='facebook-square' color='#3b5998' size={25} />
+            </TouchableOpacity>
+            {/* <TouchableOpacity
+              style={{ margin: 3 }}
+              underlayColor='gray'
+              activeOpacity={0.1}
+              onPress={() => this.shareHandler(Share.Social.EMAIL)}
+            >
+              <Icon5 name='facebook-messenger' color='#00acee' size={25} />
+            </TouchableOpacity> */}
           </View>
+
           <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
           ></View>
