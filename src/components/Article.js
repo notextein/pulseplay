@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     left: 10
   },
   iconContainer: {
-    maxHeight: 20,
+    maxHeight: 30,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end'
@@ -145,14 +145,14 @@ export default class Article extends React.Component {
           </View>
           <View style={styles.iconContainer}>
             <ToggledIcon
-              size={15}
+              size={25}
               icon='heart-o'
               pressedIcon='heart'
               defaultColor='#a83f39'
             />
-            <ToggledIcon size={15} icon='book' defaultColor='#a0522d' />
+            <ToggledIcon size={25} icon='book' defaultColor='#a0522d' />
             <ToggledIcon
-              size={15}
+              size={25}
               icon='share-square-o'
               defaultColor='#3b5998'
               handlePress={this.shareHandler}

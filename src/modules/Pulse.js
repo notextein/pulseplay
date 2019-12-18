@@ -58,13 +58,13 @@ export default class Pulse extends React.Component {
           >
             <Image style={styles.homeButtons} source={Feed} />
           </TouchableOpacity>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => navigation.navigate('LandBot')}
             underlayColor='gray'
             activeOpacity={0.1}
           >
             <Image style={styles.homeButtons} source={Feed} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </Viewport>
     );

@@ -14,6 +14,7 @@ import Icon5 from 'react-native-vector-icons/FontAwesome5';
 
 import ProfileHeader from '../components/ProfileHeader';
 import ChipTag from '../components/ChipTag';
+import ToggledIcon from '../components/ToggledIcon';
 import ContentIcons from '../components/ContentIcons';
 
 import Share from 'react-native-share';
@@ -71,12 +72,11 @@ export default class Content extends React.Component {
     Linking.openURL(url).catch(err => console.error('An error occurred', err));
   };
 
-  shareHandler(social) {
+  shareHandler() {
     const options = {
       title: 'Share content via',
       message: 'No one knows you like your Pulse',
-      url: 'https://wedopulse.com/ph/',
-      social: social
+      url: 'https://wedopulse.com/ph/'
     };
 
     Share.open(options)
@@ -154,33 +154,19 @@ export default class Content extends React.Component {
             ))}
           </View>
           <View style={styles.iconContainer}>
-            <TouchableOpacity
-              style={{ margin: 3 }}
-              underlayColor='gray'
-              activeOpacity={0.1}
-            >
-              <Icon
-                name='bookmark'
-                color={globalStyles.accent.color}
-                size={30}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{ margin: 3 }}
-              underlayColor='gray'
-              activeOpacity={0.1}
-              onPress={() => this.shareHandler(Share.Social.FACEBOOK)}
-            >
-              <Icon name='share-square-o' color='#3b5998' size={30} />
-            </TouchableOpacity>
-            {/* <TouchableOpacity
-              style={{ margin: 3 }}
-              underlayColor='gray'
-              activeOpacity={0.1}
-              onPress={() => this.shareHandler(Share.Social.EMAIL)}
-            >
-              <Icon5 name='facebook-messenger' color='#00acee' size={25} />
-            </TouchableOpacity> */}
+            <ToggledIcon
+              size={30}
+              icon='heart-o'
+              pressedIcon='heart'
+              defaultColor='#a83f39'
+            />
+            <ToggledIcon size={30} icon='book' defaultColor='#a0522d' />
+            <ToggledIcon
+              size={30}
+              icon='share-square-o'
+              defaultColor='#3b5998'
+              onPress={() => this.shareHandler()}
+            />
           </View>
 
           <View
