@@ -86,13 +86,6 @@ export default class Content extends React.Component {
       .catch(err => {
         err && console.log(err);
       });
-    // Share.shareSingle(options)
-    //   .then(res => {
-    //     console.log(res);
-    //   })
-    //   .catch(err => {
-    //     err && console.log(err);
-    //   });
   }
   render() {
     const {

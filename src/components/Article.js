@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Image, TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
+import Share from 'react-native-share';
 
 import ChipTag from './ChipTag';
 import ToggledIcon from './ToggledIcon';
@@ -66,6 +67,22 @@ export default class Article extends React.Component {
     });
   };
 
+  shareHandler() {
+    const options = {
+      title: 'Share content via',
+      message: 'No one knows you like your Pulse',
+      url: 'https://wedopulse.com/ph/'
+    };
+
+    Share.open(options)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        err && console.log(err);
+      });
+  }
+
   render() {
     const {
       id,
@@ -127,9 +144,19 @@ export default class Article extends React.Component {
             ))}
           </View>
           <View style={styles.iconContainer}>
-            <ToggledIcon size={15} icon='heart-o' defaultColor='' />
-            <ToggledIcon size={15} icon='book' />
-            <ToggledIcon size={15} icon='share-square-o' />
+            <ToggledIcon
+              size={15}
+              icon='heart-o'
+              pressedIcon='heart'
+              defaultColor='#a83f39'
+            />
+            <ToggledIcon size={15} icon='book' defaultColor='#a0522d' />
+            <ToggledIcon
+              size={15}
+              icon='share-square-o'
+              defaultColor='#3b5998'
+              handlePress={this.shareHandler}
+            />
           </View>
 
           <Text

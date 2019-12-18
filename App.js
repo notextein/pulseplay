@@ -15,7 +15,9 @@ import KolProfileScreen from './src/modules/KolProfile';
 import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
 import PostScreen from './src/modules/Post';
-import LandBotScreen from './src/modules/LandBot';
+import SymptomScreen from './src/modules/Symptom';
+// import LandBotScreen from './src/modules/LandBot';
+
 import LoginScreen from './src/modules/Login';
 
 // components
@@ -56,10 +58,10 @@ const PulseStack = createStackNavigator({
       headerTitle: 'Pulse'
     }
   },
-  LandBot: {
-    screen: LandBotScreen,
+  Symptom: {
+    screen: SymptomScreen,
     navigationOptions: {
-      headerTitle: 'Chat Support'
+      headerTitle: 'Symptom Checker'
     }
   }
 });

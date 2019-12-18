@@ -45,7 +45,7 @@ export default class Pulse extends React.Component {
             <Image style={styles.firstHomeButton} source={Health} />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => console.log('pressed')}
+            onPress={() => navigation.navigate('Symptom')}
             underlayColor='gray'
             activeOpacity={0.1}
           >

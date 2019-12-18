@@ -5,10 +5,10 @@ import {
   View,
   Image,
   TouchableOpacity,
-  TextInput,
+  // TextInput,
   StyleSheet
 } from 'react-native';
-import { Button, Snackbar } from 'react-native-paper';
+import { TextInput, Button, Snackbar } from 'react-native-paper';
 import ImagePicker from 'react-native-image-picker';
 
 import MiniProfileHeader from '../components/MiniProfileHeader';
