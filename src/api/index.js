@@ -25,7 +25,7 @@ const api = {
   post: (bean, data, callback) => {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
-    formdata.append('token', store.getState().auth.token);
+    // formdata.append('token', store.getState().auth.token);
     const config = {
       method: 'POST',
       headers: {
@@ -47,7 +47,7 @@ const api = {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
     formdata.append('token', store.getState().auth.token);
-    formdata.append('media_file', fileSrc.uri);
+    // formdata.append('media_file', fileSrc.uri);
     const config = {
       method: 'POST',
       headers: {

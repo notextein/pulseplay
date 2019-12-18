@@ -84,21 +84,24 @@ export default class Feed extends React.Component {
     }
 
     // fetch tags
-    api.get('/bean/query/getTags', p => {
-      if (p.success) {
-        let tagsArr = [];
-        let serverTags = p.result;
-        serverTags.map(el => {
-          tagsArr.push(el.code);
-        });
-        store.dispatch(fetchTags(tagsArr));
-      }
-    });
+    if (!store.getState().refs.tags.length === 0) {
+      api.get('/bean/query/getTags', p => {
+        if (p.success) {
+          let tagsArr = [];
+          let serverTags = p.result;
+          serverTags.map(el => {
+            tagsArr.push(el.code);
+          });
+          store.dispatch(fetchTags(tagsArr));
+        }
+      });
+    }
+
     const isQueryEmpty = query ? false : true;
     const shouldRender = articles.length > 0;
 
     // fetch feeds
-    if (!isSearching) {
+    if (!isSearching && articles.length === 0) {
       // to load once
       api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
         if (p.success) {
@@ -109,6 +112,7 @@ export default class Feed extends React.Component {
 
     console.log('query', query);
     console.log('isSearching', isSearching);
+    console.log('articles', articles);
 
     return (
       <>
