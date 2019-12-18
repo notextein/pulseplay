@@ -15,6 +15,7 @@ import KolProfileScreen from './src/modules/KolProfile';
 import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
 import PostScreen from './src/modules/Post';
+import LandBotScreen from './src/modules/LandBot';
 import LoginScreen from './src/modules/Login';
 
 // components
@@ -44,6 +45,21 @@ const FeedStack = createStackNavigator({
     screen: KolProfileScreen,
     navigationOptions: {
       headerTitle: 'Key Opinion Leader'
+    }
+  }
+});
+
+const PulseStack = createStackNavigator({
+  Pulse: {
+    screen: PulseScreen,
+    navigationOptions: {
+      headerTitle: 'Pulse'
+    }
+  },
+  LandBot: {
+    screen: LandBotScreen,
+    navigationOptions: {
+      headerTitle: 'Chat Support'
     }
   }
 });
@@ -83,7 +99,7 @@ const TabNavigator = createBottomTabNavigator({
     }
   },
   Pulse: {
-    screen: PulseScreen,
+    screen: PulseStack,
     navigationOptions: {
       tabBarLabel: 'Pulse',
       tabBarIcon: ({ tintColor }) => (

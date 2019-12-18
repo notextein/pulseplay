@@ -3,6 +3,7 @@ import { Image, TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 import ChipTag from './ChipTag';
+import ToggledIcon from './ToggledIcon';
 
 import api from '../api';
 import host from '../api/host';
@@ -28,7 +29,6 @@ const styles = StyleSheet.create({
   },
   articleSnippetContent: {
     fontSize: 12,
-    padding: 10,
     alignItems: 'center'
   },
   articleSnippetAvatar: {
@@ -44,6 +44,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     left: 10
+  },
+  iconContainer: {
+    maxHeight: 20,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
   }
 });
 
@@ -120,6 +126,12 @@ export default class Article extends React.Component {
               <ChipTag key={'art-tag-' + idx} tag={el} />
             ))}
           </View>
+          <View style={styles.iconContainer}>
+            <ToggledIcon size={15} icon='heart-o' defaultColor='' />
+            <ToggledIcon size={15} icon='book' />
+            <ToggledIcon size={15} icon='share-square-o' />
+          </View>
+
           <Text
             style={styles.articleSnippetContent}
             ellipsizeMode='tail'
