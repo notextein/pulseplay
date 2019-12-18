@@ -2,8 +2,8 @@
 // let request = require('request');
 
 import store from '../ducks/store';
-// const HOST = 'http://64.225.6.174:10001'; // live
-const HOST = 'http://64.225.6.174:10001'; // test
+const HOST = 'http://128.233.65.110:10001'; // live
+// const HOST = 'http://64.225.6.174:10001'; // test
 
 const api = {
   get: (bean, callback) => {

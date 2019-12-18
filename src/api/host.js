@@ -1,3 +1,3 @@
-const host = 'http://64.225.6.174:10001'; // test
+const host = 'http://128.233.65.110:10001'; // test
 
 export default host;
