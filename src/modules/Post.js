@@ -5,14 +5,15 @@ import {
   View,
   Image,
   TouchableOpacity,
-  TextInput,
+  // TextInput,
   StyleSheet
 } from 'react-native';
-import { Button, Snackbar } from 'react-native-paper';
+import { TextInput, Button, Snackbar } from 'react-native-paper';
 import ImagePicker from 'react-native-image-picker';
 
 import MiniProfileHeader from '../components/MiniProfileHeader';
 import PostSelection from '../components/PostSelection';
+// var RNFS = require('react-native-fs');
 
 // data
 import store from '../ducks/store';
@@ -58,10 +59,10 @@ export default class Post extends React.Component {
     this.state = {
       photo: null,
       visible: false,
-      title: 'Post title...',
-      content: 'Post content...',
+      // title: 'Post title...',
+      // content: 'Post content...',
       url: 'Post url (optional)...',
-      tags: 'tags...',
+      // tags: 'tags...',
       imageSource: null,
       ...this.props // to overwrite base state
     };
@@ -77,6 +78,8 @@ export default class Post extends React.Component {
     const fileSrc = {
       ...this.state.photo
     };
+
+    console.log('trying to save');
 
     api.upload('/bean/create/post', data, fileSrc, p => {
       console.log('upload response!!!', p);
@@ -116,7 +119,7 @@ export default class Post extends React.Component {
         const source = { uri: response.uri };
         this.setState({
           imageSource: source,
-          photo: response
+          photo: { uri: 'data:' + response.type + ';base64,' + response.data }
         });
       }
     });

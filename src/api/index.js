@@ -2,8 +2,8 @@
 // let request = require('request');
 
 import store from '../ducks/store';
-// const HOST = 'http://64.225.6.174:10001'; // live
-const HOST = 'http://64.225.6.174:10001'; // test
+const HOST = 'http://64.225.6.174:10001'; // live
+// const HOST = 'http://64.225.6.174:10002'; // test
 
 const api = {
   get: (bean, callback) => {
@@ -47,7 +47,7 @@ const api = {
     const formdata = new FormData();
     formdata.append('data', JSON.stringify(data));
     formdata.append('token', store.getState().auth.token);
-    formdata.append('media_file', fileSrc);
+    formdata.append('media_file', fileSrc.uri);
     const config = {
       method: 'POST',
       headers: {
@@ -58,7 +58,10 @@ const api = {
     };
 
     fetch(HOST + bean, config)
-      .then(response => response.json())
+      .then(response => {
+        console.log('upload response', response.json());
+        return response.json();
+      })
       .then(json => callback(json))
       .catch(err => {
         callback(err);
