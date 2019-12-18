@@ -41,10 +41,11 @@ export default class Feed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      fetchedOnce: false,
       isSearching: false,
       query: '',
       filtered: [],
-      articles: [],
+      articles: store.getState().feed,
       cachedArticles: [],
       ...this.props // to overwrite base prop
     };
@@ -62,6 +63,7 @@ export default class Feed extends React.Component {
     this.fetchTimer = setTimeout(() => {
       api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
         if (p.success) {
+          store.dispatch(saveFeeds(p.result));
           this.setState({ isSearching: false, articles: p.result });
         }
       });
@@ -74,7 +76,7 @@ export default class Feed extends React.Component {
   };
 
   render() {
-    const { isSearching, query, articles } = this.state;
+    const { isSearching, query, articles, fetchedOnce } = this.state;
     const { navigation } = this.props;
 
     // const unsubscribe = store.subscribe(() => console.log(store.getState()));
@@ -101,18 +103,19 @@ export default class Feed extends React.Component {
     const shouldRender = articles.length > 0;
 
     // fetch feeds
-    if (!isSearching && articles.length === 0) {
+    if (!isSearching && !fetchedOnce) {
       // to load once
       api.post('/bean/query/searchPost', { q: '%' + query + '%' }, p => {
         if (p.success) {
-          this.setState({ articles: p.result });
+          store.dispatch(saveFeeds(p.result));
+          this.setState({ fetchedOnce: true, articles: p.result });
         }
       });
     }
-
+    console.log('fetchedOnce', fetchedOnce);
+    console.log('articles', articles);
     console.log('query', query);
     console.log('isSearching', isSearching);
-    console.log('articles', articles);
 
     return (
       <>
@@ -123,7 +126,7 @@ export default class Feed extends React.Component {
             style={styles.scrollView}
           >
             <Searchbar
-              placeholder='Search for the latest Pulse...'
+              placeholder='Search for the latest Pulsess...'
               onChangeText={text => {
                 this.updateQuery(text.toLowerCase());
               }}
