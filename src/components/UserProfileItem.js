@@ -11,8 +11,15 @@ export default class UserProfileItem extends React.Component {
     if (details.isLogout && details.navigation) {
       storage.removeKey('@auth');
       details.navigation.navigate('Login');
-    } else if (details.navigation) {
+    } else if (details.type === 'preference') {
       details.navigation.navigate('Preference', { ...details });
+    } else if (details.type === 'like') {
+      details.navigation.navigate('MyArticles', { title: 'My Liked Posts:' });
+    } else if (details.type === 'read') {
+      details.navigation.navigate('MyArticles', {
+        title: 'My Reading List:',
+        showReadList: true
+      });
     }
   };
 

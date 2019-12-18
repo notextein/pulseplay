@@ -18,6 +18,19 @@ class Profile extends React.Component {
           name='Feed Preferences'
           navigation={navigation}
           red={true}
+          type='preference'
+        />
+        <UserProfileItem
+          name='My Liked Posts'
+          navigation={navigation}
+          red={true}
+          type='like'
+        />
+        <UserProfileItem
+          name='My Reading List'
+          navigation={navigation}
+          red={true}
+          type='read'
         />
         <UserProfileItem name='Security' />
         <UserProfileItem name='Language' />

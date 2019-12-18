@@ -16,6 +16,8 @@ import ProfileScreen from './src/modules/Profile';
 import PreferenceScreen from './src/modules/Preference';
 import PostScreen from './src/modules/Post';
 import SymptomScreen from './src/modules/Symptom';
+import HealthScreen from './src/modules/Health';
+import MyArticlesScreen from './src/modules/MyArticles';
 // import LandBotScreen from './src/modules/LandBot';
 
 import LoginScreen from './src/modules/Login';
@@ -63,6 +65,12 @@ const PulseStack = createStackNavigator({
     navigationOptions: {
       headerTitle: 'Symptom Checker'
     }
+  },
+  Health: {
+    screen: HealthScreen,
+    navigationOptions: {
+      headerTitle: 'Health Check'
+    }
   }
 });
 
@@ -77,6 +85,12 @@ const ProfileStack = createStackNavigator({
     screen: PreferenceScreen,
     navigationOptions: {
       headerTitle: 'Feed Preferences'
+    }
+  },
+  MyArticles: {
+    screen: MyArticlesScreen,
+    navigationOptions: {
+      headerTitle: 'My Articles'
     }
   }
 });

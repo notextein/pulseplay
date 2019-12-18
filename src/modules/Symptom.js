@@ -8,7 +8,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-import Viewport from './Viewport';
+import Article from '../components/Article';
 import globalStyles from '../styles';
 
 import HeaderLogo from '../media/pulse.jpg';
@@ -29,11 +29,9 @@ const styles = StyleSheet.create({
     marginTop: 100,
     marginBottom: 20
   },
-  homeButtons: {
-    width: 300,
-    height: 120,
-    borderRadius: 10,
-    marginVertical: 20
+  sectionContainer: {
+    marginTop: 10,
+    paddingHorizontal: 24
   }
 });
 
@@ -45,6 +43,12 @@ export default class Symptom extends React.Component {
         <Image style={globalStyles.headerLogo} source={HeaderLogo} />
         <ScrollView style={{ marginTop: 100 }}>
           <Image source={SymptomResult} />
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Related articles:</Text>
+            {articles.map((el, idx) => (
+              <Article key={idx} navigation={navigation} {...el} />
+            ))}
+          </View>
         </ScrollView>
       </View>
     );
